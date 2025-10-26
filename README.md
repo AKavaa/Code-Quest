@@ -41,7 +41,7 @@ Instead of plain text problems, users will **play their way through algorithmic 
 
 ## 🤝 Contributors
 - **Aleksander Kavaleuskiy** –  Scrum Master --- Software Developer --- Database Administrator (DBA) --- UI/UX Designer
-- **[Giorgos Tafouna]** – Software Developer --- UI/UX Designer --- Quality Assurance (QA) --- System Analyst 
+- **Giorgos Tafouna** – Software Developer --- UI/UX Designer --- Quality Assurance (QA) --- System Analyst 
 
 ---
 
