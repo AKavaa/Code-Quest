@@ -1,4 +1,5 @@
-# 🧠 Code-Quest  
+# 🧠 Code-Quest  ![Uploading Code-Quest.JPG…]()
+
 ### A Game for Developing Algorithmic Thinking Skills
 
 **Algorithmic Quest** is an interactive platform designed to help learners strengthen their problem-solving and algorithmic thinking abilities through coding challenges — but with a twist:  
