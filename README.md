@@ -1,4 +1,4 @@
-# 🧠 Code-Quest  ![Uploading Code-Quest.JPG…]()
+# 🧠 Code-Quest  
 
 ### A Game for Developing Algorithmic Thinking Skills
 
