@@ -10,7 +10,8 @@ body {
     height: 100vh;
     width: 100vw;
     background-image: url('../assets/images/Code-Quest.JPG');
-    background-size: cover;
+    background-size: contain;
+    background-color: #f7f4ef;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -73,4 +74,26 @@ button {
 
 button:hover {
     background-color: #e29d1f;
+}
+
+
+/*
+Make it Mobile compatible on any gadget
+*/
+
+@media(max-width: 480px) {
+    .container {
+        padding: 20px;
+
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        font-size: 1.0rem;
+        padding: 10px;
+    }
 }
