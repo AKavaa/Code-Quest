@@ -1,0 +1,114 @@
+/*
+
+Loading the Image for the initial background
+
+*/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/images/Code-Quest.JPG');
+    background-size: contain;
+    background-color: #f7f4ef;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*
+
+for darker overlay and more contrast to the background image
+
+*/
+body::before {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+
+}
+/* 
+
+Container for the title and difficulty buttons
+
+*/
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    padding: 35px 50px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 90px;
+}
+
+/* 
+
+Title Keyword Highlight
+
+*/
+
+h1 span {
+    color: #f9b234;
+}
+
+/*
+
+Button layout
+
+*/
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/*
+
+Button square style
+
+*/
+.square {
+    background-color: #f9b234;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    width: 120px;
+    height: 120px;
+}
+
+.square:hover {
+    background-color: #e29d1f;
+}
+
+/*
+
+Make it Mobile compatible on any gadget
+
+*/
+
+@media(max-width: 480px) {
+    .container {
+        padding: 20px;
+
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        font-size: 1.0rem;
+        padding: 10px;
+    }
+}
