@@ -11,7 +11,7 @@ function startGame() {
     // save username in the local storage
     localStorage.setItem("username", username);
 
-    window.location.href = "../src/entry_level/entry.html";
+    window.location.href = "../difficulty.html";
 }
 
 

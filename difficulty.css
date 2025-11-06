@@ -24,13 +24,18 @@ for darker overlay and more contrast to the background image
 
 */
 body::before {
+    content: "";
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     z-index: -1;
 
 }
+
+
 /* 
 
 Container for the title and difficulty buttons
