@@ -1,9 +1,18 @@
 * {
+
+    /*
+General settings 
+*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+
+/*
+variables for the styles
+*/
 
 :root {
     --primary-color: #4361ee;
@@ -40,25 +49,6 @@ body {
     z-index: -1;
 }
 
-.background .shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(67, 97, 238, 0.1);
-}
-
-.background .shape:first-child {
-    width: 300px;
-    height: 300px;
-    top: -100px;
-    right: -100px;
-}
-
-.background .shape:last-child {
-    width: 200px;
-    height: 200px;
-    bottom: -50px;
-    left: -50px;
-}
 
 .container {
     background: rgba(255, 255, 255, 0.95);
