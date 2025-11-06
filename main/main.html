@@ -3,19 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
     <link rel="stylesheet" href="main.css">
-    <title>Code-Quest</title>
+    <title>Code Quest - Test Your Knowledge</title>
 </head>
 <body>
-
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
     <div class="container">
-        <h1>Welcome to <span>Code Quest</span></h1>
-        <input type="text" id="username" placeholder=" Enter your Username">
-
-        <button onclick=" startGame()"> Start</button>
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <h1>Code <span>Quest</span></h1>
+        </div>
+        <p class="subtitle">Test your knowledge across various difficulty levels</p>
+        
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Enter your username" autocomplete="off">
+        </div>
+        
+        <button class="start-btn" onclick="startGame()">
+            <span>Start Quiz</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+        
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-trophy"></i>
+                <span>Multiple Difficulty Levels</span>
+            </div>
+           
+        </div>
     </div>
 
     <script src="main.js"></script>
-    
 </body>
 </html>

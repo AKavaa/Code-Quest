@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="difficulty.css">
-    <title>Select Difficulty</title>
+    <title>Select Difficulty - Code Quest</title>
 </head>
 <body>
-
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
     <div class="container">
-        <h1>Select <span>Difficulty Level</span></h1>
+        <div class="logo">
+            <img src="../assets/images/Code-Quest.JPG" alt="Code Quest Logo" class="logo-image">
+            <h1>Select <span>Difficulty</span></h1>
+        </div>
+        
+        <p class="subtitle">Choose a level that matches your knowledge</p>
 
         <div class="difficulty-buttons">
-            <button class="square" onclick="location.href='beginner.html'">Beginner</button>
-            <button class="square" onclick="location.href='intermediate.html'">Intermediate</button>
-            <button class="square" onclick="location.href='advanced.html'">Advanced</button>
+            <button class="difficulty-btn beginner" onclick="location.href='beginner.html'">
+                <i class="fas fa-seedling"></i>
+                <span>Beginner</span>
+                <small>Perfect for new learners</small>
+            </button>
+            
+            <button class="difficulty-btn intermediate" onclick="location.href='intermediate.html'">
+                <i class="fas fa-chart-line"></i>
+                <span>Intermediate</span>
+                <small>For those with some experience</small>
+            </button>
+            
+            <button class="difficulty-btn advanced" onclick="location.href='advanced.html'">
+                <i class="fas fa-trophy"></i>
+                <span>Advanced</span>
+                <small>Challenge yourself</small>
+            </button>
         </div>
+        
+        <button class="back-btn" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </button>
     </div>
-
 </body>
 </html>
