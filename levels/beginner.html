@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../difficulty.css">
+    <link rel="stylesheet" href="../quiz.css">
+    <title>Beginner Quiz - Code Quest</title>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="../assets/images/Code-Quest.JPG" alt="Code Quest Logo" class="logo-image">
+            <h1>Beginner <span>Quiz</span></h1>
+        </div>
+        
+        <div class="question-container">
+            <!-- Questions will be loaded here by JavaScript -->
+        </div>
+        
+        <button class="back-btn" onclick="window.location.href='../difficulty.html'">
+            <i class="fas fa-arrow-left"></i> Back to Difficulty Selection
+        </button>
+    </div>
+
+    <script src="../questions.js"></script>
+</body>
+</html>
