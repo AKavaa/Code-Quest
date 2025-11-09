@@ -80,7 +80,7 @@ h1 span {
 .question {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: #12172A;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
@@ -89,6 +89,7 @@ h1 span {
     display: grid;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    color: #0D1320;
 }
 
 .option-btn {
@@ -109,7 +110,7 @@ h1 span {
 .option-btn:hover {
     background: rgba(255, 255, 255, 0.13);
     letter-spacing: 1.5px;
-    border-color: #23a2f6;
+    border-color: rgba(31, 42, 68, 0.25);
 }
 
 .option-btn.correct {
@@ -129,6 +130,7 @@ h1 span {
     font-size: 1.2rem;
     text-align: center;
     margin-top: 1rem;
+    color: #2D3448;
 }
 
 .back-btn {
