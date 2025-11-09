@@ -128,7 +128,7 @@ function displayError(message) {
         questionContainer.innerHTML = `
             <div class="error-message">
                 <p>${message}</p>
-                <button onclick="window.location.href='difficulty.html'" class="back-btn">
+                <button onclick="window.location.href='/Code-Quest/difficulty.html'" class="back-btn">
                     Back to Difficulty Selection
                 </button>
             </div>
