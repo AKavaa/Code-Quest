@@ -83,7 +83,7 @@ function checkAnswer(selectedIndex) {
     optionButtons.forEach(button => button.disabled = true);
 
     if (selectedIndex === question.answer) {
-        score++;
+        score + 5;
         optionButtons[selectedIndex].classList.add('correct');
     } else {
         optionButtons[selectedIndex].classList.add('wrong');
