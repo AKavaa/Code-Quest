@@ -9,7 +9,7 @@ function getDifficulty() {
     if (path.includes('beginner')) return 'beginner';
     if (path.includes('intermediate')) return 'intermediate';
     if (path.includes('advanced')) return 'advanced';
-    return 'beginner'; // default fallback
+    // return 'beginner'; // default fallback
 }
 
 // Initialize the quiz when the page loads
@@ -115,7 +115,7 @@ function endQuiz() {
         <h2>Quiz Completed!</h2>
         <p>Your final score: ${score} out of ${currentQuestions.length}</p>
         <p>Percentage: ${percentage.toFixed(2)}%</p>
-        <button onclick="window.location.href='difficulty.html'" class="restart-btn">
+        <button onclick="window.location.href='../difficulty.html'" class="restart-btn">
             Try Another Difficulty
         </button>
     `;
@@ -137,7 +137,7 @@ function displayError(message) {
 }
 
 // Fetch questions from the JSON file
-fetch('./Questions/questions.json')
+fetch('/Questions/questions.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
