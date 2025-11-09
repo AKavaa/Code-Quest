@@ -11,7 +11,7 @@ function startGame() {
     // save username in the local storage
     localStorage.setItem("username", username);
 
-    window.location.href = "../difficulty.html";
+    window.location.href = "/Code-Quest/difficulty.html";
 }
 
 
