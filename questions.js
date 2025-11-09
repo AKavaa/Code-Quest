@@ -137,7 +137,7 @@ function displayError(message) {
 }
 
 // Fetch questions from the JSON file
-fetch('/Questions/questions.json')
+fetch('/Code-Quest//Questions/questions.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
