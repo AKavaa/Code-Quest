@@ -34,7 +34,7 @@ Instead of plain text problems, users will **play their way through algorithmic 
 | Phase | Focus | Status |
 |:------|:------|:-------|
 | Phase 1 | Core idea design + wireframes | 🔄 In Progress |
-| Phase 2 | Backend setup + JSON design | 🔄 In Progress |
+| Phase 2 | Backend setup + JSON format | 🔄 In Progress |
 | Phase 3 | Frontend integration & game logic | 🔄 In Progress|
 | Phase 4 | Public demo release | ⏳ Planned |
 
