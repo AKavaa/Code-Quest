@@ -152,7 +152,7 @@ h1 span {
 }
 
 .back-btn:hover {
-    margin-right: 8px;
+    margin: 20px auto 0;
     transition: var(--transition);
 }
 
