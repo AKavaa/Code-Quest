@@ -1,0 +1,9 @@
+{
+    "iq_questions": [
+        {
+            "question": "What number comes next in this sequence? 2, 6, 12, 20, 30, ?",
+            "type": "Pattern Recognition"
+        }
+    ],
+    "answer": "42"
+}
