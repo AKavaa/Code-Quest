@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../difficulty.css">
-    <title>Beginner Section</title>
+    <link rel="stylesheet" href="../quiz.css">
+    <title>Beginner Quiz - Code Quest</title>
 </head>
 <body>
     <div class="background">
@@ -19,34 +20,19 @@
     <div class="container">
         <div class="logo">
             <img src="../assets/images/Code-Quest.JPG" alt="Code Quest Logo" class="logo-image">
-            <h1>  <span>IQ</span> Section </h1>
+            <h1>IQ <span>Section</span></h1>
         </div>
-         <p class="subtitle">Choose a path where you want to be tested</p>
-
-        <div class="difficulty-buttons">
-            <button class="difficulty-btn beginner" onclick="location.href='/Code-Quest/levels/beginner.html'">
-                <i class="fas fa-seedling"></i>
-                <span>IQ Questions</span>
-                <small>Warm up questions</small>
-            </button>
-            
-            <button class="difficulty-btn intermediate" onclick="location.href='/Code-Quest/levels/intermediate.html'">
-                <i class="fas fa-seedling"></i>
-                <span>Basic Questions</span>
-                <small>Simple questions</small>
-            </button>
-            
-            <button class="difficulty-btn advanced" onclick="location.href='/Code-Quest/levels/advanced.html'">
-                <i class="fas fa-seedling"></i>
-                <span>Fundamentals</span>
-                <small>Understanding some key concepts </small>
-            </button>
-        </div>
-
         
-        <button class="back-btn" onclick="window.location.href='../difficulty.html'">
-            <i class="fas fa-arrow-left"></i> Back to Difficulty
+        <div class="question-container">
+            <!-- Questions will be loaded here by JavaScript -->
+        </div>
+        
+        <button class="back-btn" onclick="window.location.href='./main_page.html'">
+            <i class="fas fa-arrow-left"></i> Back to main section
         </button>
     </div>
+
+   
+    <script src="../beginner_questions.js"></script>
 </body>
 </html>

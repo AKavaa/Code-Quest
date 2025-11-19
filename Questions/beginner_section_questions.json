@@ -54,28 +54,6 @@
             "answer": 2
         }
     ],
-    "advanced": [
-        {
-            "question": "In which year was the first iPhone released?",
-            "options": [
-                "2005",
-                "2006",
-                "2007",
-                "2008"
-            ],
-            "answer": 2
-        },
-        {
-            "question": "What is the capital of Australia?",
-            "options": [
-                "Sydney",
-                "Melbourne",
-                "Canberra",
-                "Brisbane"
-            ],
-            "answer": 2
-        }
-    ],
     "fundamentals": [
         {
             "question": "What is the opposite of 'hot'?",
@@ -83,17 +61,17 @@
             "type": "Fundamentals"
         },
         {
-            "question": "How many sides does a triangle has",
+            "question": "How many sides does a triangle have?",
             "options": [
                 "2",
                 "3",
                 "4",
                 "5"
             ],
-            "answer": "3"
+            "answer": 1
         },
         {
-            "question": "How many planets are in the solar system",
+            "question": "How many planets are in the solar system?",
             "answer": "8"
         }
     ]
