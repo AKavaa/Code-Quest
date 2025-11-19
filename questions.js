@@ -9,7 +9,7 @@ function getDifficulty() {
     if (path.includes('beginner')) return 'beginner';
     if (path.includes('intermediate')) return 'intermediate';
     if (path.includes('advanced')) return 'advanced';
-    return 'beginner'; // default fallback
+    return 'beginner';  // default fallback
 }
 
 // Initialize the quiz when the page loads
