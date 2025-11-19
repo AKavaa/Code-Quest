@@ -2,8 +2,24 @@
     "iq_questions": [
         {
             "question": "What number comes next in this sequence? 2, 6, 12, 20, 30, ?",
+            "answer": "42",
             "type": "Pattern Recognition"
+        },
+        {
+            "question": "How many squares (of any size) are in a 3×3 grid?",
+            "options": [
+                "9",
+                "12",
+                "14",
+                "16"
+            ],
+            "answer": 2,
+            "type": "Spatial Reasoning"
+        },
+        {
+            "question": "If 5 workers can build 5 walls in 5 days, how many days does it take 10 workers to build 10 walls?",
+            "answer": "5",
+            "type": "Mathematical Reasoning"
         }
-    ],
-    "answer": "42"
+    ]
 }
