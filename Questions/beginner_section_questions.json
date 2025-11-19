@@ -21,5 +21,80 @@
             "answer": "5",
             "type": "Mathematical Reasoning"
         }
+    ],
+    "basic_questions": [
+        {
+            "question": "What is the largest ocean on Earth?",
+            "options": [
+                "Atlantic",
+                "Indian",
+                "Arctic",
+                "Pacific"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which element has the chemical symbol 'Au'?",
+            "options": [
+                "Silver",
+                "Gold",
+                "Aluminum",
+                "Argon"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the square root of 64?",
+            "options": [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "answer": 2
+        }
+    ],
+    "advanced": [
+        {
+            "question": "In which year was the first iPhone released?",
+            "options": [
+                "2005",
+                "2006",
+                "2007",
+                "2008"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the capital of Australia?",
+            "options": [
+                "Sydney",
+                "Melbourne",
+                "Canberra",
+                "Brisbane"
+            ],
+            "answer": 2
+        }
+    ],
+    "fundamentals": [
+        {
+            "question": "What is the opposite of 'hot'?",
+            "answer": "cold",
+            "type": "Fundamentals"
+        },
+        {
+            "question": "How many sides does a triangle has",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "3"
+        },
+        {
+            "question": "How many planets are in the solar system",
+            "answer": "8"
+        }
     ]
 }
