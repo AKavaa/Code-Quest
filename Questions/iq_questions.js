@@ -1,4 +1,4 @@
-const BEGINNER_SECTION_QUESTIONS_JSON = '../Questions/beginner_questions.json';
+const BEGINNER_SECTION_QUESTIONS_JSON = '../Questions/questions_iq.json';
 
 let locked_questions = {};
 let currentQuestions = [];
@@ -10,11 +10,11 @@ function getDifficulty() {
     const path = window.location.pathname;
     console.log("Current path:", path); // DEBUG
 
-    if (path.includes('first_box')) return 'iq_questions';
-    if (path.includes('second_box')) return 'basic_questions';
-    if (path.includes('third_box')) return 'fundamentals';
+    if (path.includes('first_box')) return 'beginner';
+    if (path.includes('second_box')) return 'intermediate';
+    if (path.includes('third_box')) return 'advanced';
 
-    return 'iq_questions';  // default fallback
+    return 'beginner';  // default fallback
 }
 
 // Initialize the quiz when the page loads
