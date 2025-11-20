@@ -51,7 +51,7 @@ function loadQuestionsForDifficulty() {
     const difficulty = getDifficulty();
     console.log("Loading difficulty:", difficulty); // DEBUG
 
-    currentQuestions = locked_questions[difficulty] || [];
+    currentQuestions = locked_questions.iq_questions.filter (q => q.level === difficulty) ;
     console.log("Questions found:", currentQuestions.length); // DEBUG
 
     currentQuestionIndex = 0;
