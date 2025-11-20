@@ -1,4 +1,4 @@
-const BEGINNER_SECTION_QUESTIONS_JSON = '../Questions/questions_iq.json';
+const QUESTIONS_JSON = '../Questions/questions_iq.json';
 
 let locked_questions = {};
 let currentQuestions = [];
