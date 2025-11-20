@@ -207,3 +207,64 @@ h1 span {
         font-size: 0.9rem;
     }
 }
+
+/* Text Input Question styles*/
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.answer-input {
+    background-color: #ffff;
+    border: 2px solid #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    width: 300px;
+
+}
+
+.answer-input:focus {
+
+    border-color: var(--primary-color);
+    background:  #f8f9fa;
+
+}
+
+.answer-input::placeholder{
+    color: var(--text-color);
+
+}
+
+.submit-btn {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.13);
+    letter-spacing: 1.5px;
+    border-color: rgba(31, 42, 68, 0.25);
+}
+
+.submit-btn:disabled {
+    background: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
