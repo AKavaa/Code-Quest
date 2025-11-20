@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load questions from JSON file
 function loadQuestionsFromJSON() {
-    console.log("Fetching questions from:", BEGINNER_SECTION_QUESTIONS_JSON); // DEBUG
+    console.log("Fetching questions from:", QUESTIONS_JSON); // DEBUG
 
     fetch(QUESTIONS_JSON)
         .then(response => {
