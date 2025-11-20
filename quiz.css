@@ -260,8 +260,6 @@ h1 span {
     background: rgba(255, 255, 255, 0.13);
     letter-spacing: 1.5px;
     border-color: var(--secondary-color);
-    transition: var(--transition);
-
 }
 
 .submit-btn:disabled {
