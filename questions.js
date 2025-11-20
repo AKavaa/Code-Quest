@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load questions from JSON file
 function loadQuestionsFromJSON() {
-    fetch('/Code-Quest/Questions/questions.json')
+    fetch('../Questions/questions.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -115,7 +115,7 @@ function endQuiz() {
         <h2>Quiz Completed!</h2>
         <p>Your final score: ${score} out of ${currentQuestions.length}</p>
         <p>Percentage: ${percentage.toFixed(2)}%</p>
-        <button onclick="window.location.href='/Code-Quest/difficulty.html'" class="restart-btn">
+        <button onclick="window.location.href='../difficulty.html'" class="restart-btn">
             Try Another Difficulty
         </button>
     `;
@@ -128,7 +128,7 @@ function displayError(message) {
         questionContainer.innerHTML = `
             <div class="error-message">
                 <p>${message}</p>
-                <button onclick="window.location.href='/Code-Quest/difficulty.html'" class="back-btn">
+                <button onclick="window.location.href='../difficulty.html'" class="back-btn">
                     Back to Difficulty Selection
                 </button>
             </div>
@@ -137,7 +137,7 @@ function displayError(message) {
 }
 
 // Fetch questions from the JSON file
-fetch('/Code-Quest//Questions/questions.json')
+fetch('../Questions/questions.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
