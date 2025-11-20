@@ -176,7 +176,7 @@ function endQuiz() {
     if (score <= 1) {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
-            <h2> 😔 You can do better than than!</h2>
+            <h2> 😔 You can do better than that!</h2>
             <p>Your final score: ${score} out of ${currentQuestions.length}</p>
             <p>Percentage: ${percentage.toFixed(2)}%</p>
             <button onclick="window.location.href='./main_page.html'" class="restart-btn">
