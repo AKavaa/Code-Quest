@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadQuestionsFromJSON() {
     console.log("Fetching questions from:", BEGINNER_SECTION_QUESTIONS_JSON); // DEBUG
 
-    fetch(BEGINNER_SECTION_QUESTIONS_JSON)
+    fetch(QUESTIONS_JSON)
         .then(response => {
             console.log("Response status:", response.status); // DEBUG
             if (!response.ok) {
