@@ -1,0 +1,80 @@
+{
+    "iq_questions": [
+        {
+            "level": "beginner",
+            "question": "What number comes next in this sequence? 1, 3, 6, 10, 15, __",
+            "answer": "21",
+            "type": "Pattern Recognition"
+        },
+        {
+            "level": "beginner",
+            "question": "Which shape has the most sides?",
+            "options": [
+                "Triangle",
+                "Square",
+                "Pentagon",
+                "Hexagon"
+            ],
+            "answer": 3,
+            "type": "Spatial Reasoning"
+        },
+        {
+            "level": "beginner",
+            "question": "What is the missing number? 12 → 6, 20 → 10, 8 → __",
+            "answer": "4",
+            "type": "Logical Deduction"
+        },
+
+        {
+            "level": "intermediate",
+            "question": "What number comes next in the sequence? 2, 6, 12, 20, 30, __",
+            "answer": "42",
+            "type": "Pattern Recognition"
+        },
+        {
+            "level": "intermediate",
+            "question": "How many squares (of any size) are in a 4×4 grid?",
+            "options": [
+                "16",
+                "20",
+                "30",
+                "40"
+            ],
+            "answer": 2,
+            "type": "Spatial Reasoning"
+
+        },
+        {
+            "level": "intermediate",
+            "question": "If 5 workers can build 5 walls in 5 days, how many days does it take 15 workers to build 15 walls?",
+            "answer": "5",
+            "type": "Mathematical Reasoning"
+
+        },
+
+        {
+            "level": "advanced",
+            "question": "Find the missing number: 4, 9, 19, 39, 79, __",
+            "answer": "159",
+            "type": "Pattern Recognition"
+        },
+        {
+            "level": "advanced",
+            "question": "Rotate this shape mentally: If a 'Γ' shape rotates 90° clockwise, what does it look like?",
+          "options": [
+                "┘",
+                "└",
+                "┐",
+                "┌"
+            ],
+            "answer": 0,
+            "type": "Spatial Reasoning"
+        },
+        {
+            "level": "advanced",
+            "question": "A number increases by 20%, then decreases by 25%. What is the net percentage change?",
+            "answer": "-10",
+            "type": "Mathematical Reasoning"
+        }
+    ]
+}
