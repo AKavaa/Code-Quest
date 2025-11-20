@@ -246,31 +246,18 @@ h1 span {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     border: none;
-    padding: 15px 40px;
-    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: 6px;
     cursor: pointer;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
-}
-
-.submit-btn i {
-    transition: var(--transition);
+    min-width: 120px
 }
 
 .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(67, 97, 238, 0.4);
-}
-
-.submit-btn:hover i {
-    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
 }
 
 .submit-btn:disabled {
