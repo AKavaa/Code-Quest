@@ -1,0 +1,81 @@
+{
+    "programming_questions": [
+        {
+            "level": "beginner",
+            "question": "What is the output of this code? print(3 + 2 * 2)",
+            "options": [
+                "10",
+                "7",
+                "8",
+                "5"
+            ],
+            "answer": 1,
+            "type": "Python Output"
+        },
+    
+        {
+            "level": "beginner",
+            "question": "Which data type is used to store text in most programming languages?",
+            "options": [
+                "int",
+                "float",
+                "string",
+                "bool"
+            ],
+            "answer": 2,
+            "type": "Theory"
+        },
+
+        {
+            "level": "beginner",
+            "question": "What does HTML stand for?",
+            "options": [
+                "Hyper Text Markup Language",
+                "High Transfer Meta Language",
+                "Home Tool Markup Language",
+                "Hyperlink Text Management Language"
+            ],
+            "answer": 0,
+            "type": "Web Development"
+        },
+
+        {
+            "level": "intermediate",
+            "question": "Which SQL command is used to remove a table completely?",
+            "options": [
+                "DELETE",
+                "DROP",
+                "REMOVE",
+                "CLEAR"
+            ],
+            "answer": 1,
+            "type": "Databases"
+        },
+        
+        {
+            "level": "intermediate",
+            "question": "What is the time complexity of binary search?",
+            "options": [
+                "O(n)",
+                "O(log n)",
+                "O(n log n)",
+                "O(1)"
+            ],
+            "answer": 1,
+            "type": "Algorithms"
+        },
+     
+        {
+            "level": "advanced",
+            "question": "What is the Big-O complexity of the best case for quicksort?",
+            "options": [
+                "O(n²)",
+                "O(n log n)",
+                "O(log n)",
+                "O(n)"
+            ],
+            "answer": 1,
+            "type": "Algorithms"
+        }
+    ]
+}
