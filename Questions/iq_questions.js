@@ -173,7 +173,20 @@ function endQuiz() {
     const questionContainer = document.querySelector('.question-container');
     const percentage = (score / currentQuestions.length) * 100;
 
-    if (score <= 1) {
+    if (score === 0) {
+
+        questionContainer.innerHTML = `
+        <div class="quiz-complete">
+            <h2>🫤 You are more than that</h2>
+            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Percentage: ${percentage.toFixed(2)}%</p>
+            <button onclick="window.location.href='./main_page.html'" class="restart-btn">
+                Back to Main Section
+            </button>
+        </div>
+    `
+
+    } else if (score <= 1) {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😔 You can do better than that!</h2>
