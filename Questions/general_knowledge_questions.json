@@ -2,12 +2,6 @@
     "general_knowledge_questions": [
         {
             "level": "beginner",
-            "question": "What is the capital of France?",
-            "answer": "Paris",
-            "type": "Geography"
-        },
-        {
-            "level": "beginner",
             "question": "How many continents are there on Earth?",
             "options": [
                 "5",
@@ -23,18 +17,6 @@
             "question": "Who painted the Mona Lisa?",
             "answer": "Leonardo da Vinci",
             "type": "Art"
-        },
-        {
-            "level": "beginner",
-            "question": "What is the largest planet in our solar system?",
-            "options": [
-                "Earth",
-                "Saturn",
-                "Jupiter",
-                "Neptune"
-            ],
-            "answer": 2,
-            "type": "Science"
         },
         {
             "level": "beginner",
@@ -62,56 +44,14 @@
         },
         {
             "level": "intermediate",
-            "question": "What is the longest river in the world?",
-            "options": [
-                "Amazon River",
-                "Nile River",
-                "Yangtze River",
-                "Mississippi River"
-            ],
-            "answer": 1,
-            "type": "Geography"
-        },
-        {
-            "level": "intermediate",
-            "question": "Who wrote '1984'?",
-            "answer": "George Orwell",
-            "type": "Literature"
-        },
-        {
-            "level": "intermediate",
             "question": "What is the currency of Japan?",
             "answer": "Yen",
             "type": "Economics"
         },
         {
             "level": "advanced",
-            "question": "Which element has the highest melting point?",
-            "options": [
-                "Tungsten",
-                "Carbon",
-                "Osmium",
-                "Titanium"
-            ],
-            "answer": 0,
-            "type": "Science"
-        },
-        {
-            "level": "advanced",
             "question": "Who was the first woman to win a Nobel Prize?",
             "answer": "Marie Curie",
-            "type": "History"
-        },
-        {
-            "level": "advanced",
-            "question": "In which country would you find the ancient city of Petra?",
-            "options": [
-                "Egypt",
-                "Jordan",
-                "Israel",
-                "Turkey"
-            ],
-            "answer": 1,
             "type": "History"
         },
         {
