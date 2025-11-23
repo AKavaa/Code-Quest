@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load questions from JSON file
 function loadQuestionsFromJSON() {
-    console.log("Fetching questions from:", QUESTIONS_JSON); // DEBUG
+    console.log("Fetching questions from:", QUESTIONS__PROGRAMMING_JSON); // DEBUG
 
-    fetch(QUESTIONS_JSON)
+    fetch(QUESTIONS__PROGRAMMING_JSON)
         .then(response => {
             console.log("Response status:", response.status); // DEBUG
             if (!response.ok) {
@@ -51,7 +51,7 @@ function loadQuestionsForDifficulty() {
     const difficulty = getDifficulty();
     console.log("Loading difficulty:", difficulty); // DEBUG
 
-    currentQuestions = locked_questions.questions_programming.filter(q => q.level === difficulty);
+    currentQuestions = locked_questions.programming_questions.filter(q => q.level === difficulty);
     console.log("Questions found:", currentQuestions.length); // DEBUG
 
     currentQuestionIndex = 0;
