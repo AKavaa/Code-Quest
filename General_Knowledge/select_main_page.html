@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../difficulty.css">
+    <title>Beginner Section</title>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="../assets/images/Code-Quest.JPG" alt="Code Quest Logo" class="logo-image">
+            <h1>General Knowledge <span>Section</span></h1>
+        </div>
+         <p class="subtitle">Choose a path where you want to be tested</p>
+
+        <div class="difficulty-buttons">
+            <button class="difficulty-btn beginner" onclick="location.href='./select_beginner.html'">
+                <i class="fas fa-university"></i>
+                <span>Beginner</span>
+                <small>Warm up questions</small>
+            </button>
+            
+            <button class="difficulty-btn intermediate" onclick="location.href='./select_intermediate.html'">
+                <i class="fas fa-mouse-pointer "></i>
+                <span>intermediate</span>
+                <small>Simple questions</small>
+            </button>
+            
+            <button class="difficulty-btn advanced" onclick="location.href='./select_advanced.html'">
+                <i class="fa fa-paper-plane"></i>
+                <span>Advanced</span>
+                <small>Understanding some key concepts</small>
+            </button>
+        </div>
+
+        
+        <button class="back-btn" onclick="window.location.href='../difficulty.html'">
+            <i class="fas fa-arrow-left"></i> Back to difficulty section
+        </button>
+    </div>
+</body>
+</html>
