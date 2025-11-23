@@ -12,7 +12,6 @@
             "answer": 1,
             "type": "Python Output"
         },
-    
         {
             "level": "beginner",
             "question": "Which data type is used to store text in most programming languages?",
@@ -25,7 +24,6 @@
             "answer": 2,
             "type": "Theory"
         },
-
         {
             "level": "beginner",
             "question": "What does HTML stand for?",
@@ -38,7 +36,6 @@
             "answer": 0,
             "type": "Web Development"
         },
-
         {
             "level": "intermediate",
             "question": "Which SQL command is used to remove a table completely?",
@@ -51,7 +48,12 @@
             "answer": 1,
             "type": "Databases"
         },
-        
+        {
+            "level": "intermediate",
+            "question": "In object-oriented programming, what keyword is used in many languages (like Java, C++, C#) to create an object from a class?",
+            "answer": "new",
+            "type": "OOP Theory"
+        },
         {
             "level": "intermediate",
             "question": "What is the time complexity of binary search?",
@@ -64,7 +66,6 @@
             "answer": 1,
             "type": "Algorithms"
         },
-     
         {
             "level": "advanced",
             "question": "What is the Big-O complexity of the best case for quicksort?",
@@ -76,6 +77,18 @@
             ],
             "answer": 1,
             "type": "Algorithms"
+        },
+        {
+            "level": "advanced",
+            "question": "Which data structure is used to implement function call management in most programming languages?",
+            "answer": "stack",
+            "type": "Data Structures"
+        },
+        {
+            "level": "advanced",
+            "question": "What is the term for a function that calls itself during execution?",
+            "answer": "recursion",
+            "type": "Programming Concepts"
         }
     ]
 }
