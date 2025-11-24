@@ -50,6 +50,41 @@ body {
 }
 
 
+.player-btn {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+
+
+}
+
+.player-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.player-btn:hover i {
+    transform: translateX(-3px);
+}
+
+.player-btn:hover i {
+    transform: translateX(-3px);
+}
+
+
 .container {
     background: rgba(255, 255, 255, 0.95);
     padding: 40px;
