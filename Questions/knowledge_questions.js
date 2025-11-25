@@ -180,7 +180,7 @@ function endQuiz() {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2>🫤 You are more than that</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
             <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
@@ -192,7 +192,7 @@ function endQuiz() {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😔 You can do better than that!</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
             <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
@@ -207,7 +207,7 @@ function endQuiz() {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😌 Very close to perfection!</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
             <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
@@ -220,7 +220,7 @@ function endQuiz() {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 🎉 Quiz Completed!</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
             <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
