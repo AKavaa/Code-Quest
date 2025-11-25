@@ -115,9 +115,10 @@ function checkAnswer(selectedIndex) {
     optionButtons.forEach(button => button.disabled = true);
 
     if (selectedIndex === question.answer) {
-        score++;
+        score += 20;
         optionButtons[selectedIndex].classList.add('correct');
     } else {
+        score -= 10;
         optionButtons[selectedIndex].classList.add('wrong');
         optionButtons[question.answer].classList.add('correct');
     }
@@ -139,10 +140,11 @@ function checkTextAnswer() {
     input.disabled = true;
 
     if (userAnswer === correctAnswer) {
-        score++;
+        score += 20;
         input.style.borderColor = '#4CAF50';
         input.style.backgroundColor = 'rgba(76, 175, 80, 0.2)';
     } else {
+        score -= 10;
         input.style.borderColor = '#f44336';
         input.style.backgroundColor = 'rgba(244, 67, 54, 0.2)';
 
