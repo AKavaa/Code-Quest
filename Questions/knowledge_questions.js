@@ -9,8 +9,9 @@ let score = 0;
 // Get the difficulty from the current page URL
 function getDifficulty() {
     const path = window.location.pathname;
-    console.log("Current path:", path); // DEBUG
 
+
+    // adds each questions in the appropriate section listed below
     if (path.includes('select_beginner')) return 'beginner';
     if (path.includes('select_intermediate')) return 'intermediate';
     if (path.includes('select_advanced')) return 'advanced';
