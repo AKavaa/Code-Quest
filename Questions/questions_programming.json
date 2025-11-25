@@ -3,24 +3,14 @@
         {
             "level": "beginner",
             "question": "What is the output of this code? print(3 + 2 * 2)",
-            "options": [
-                "10",
-                "7",
-                "8",
-                "5"
-            ],
+            "options": ["10", "7", "8", "5"],
             "answer": 1,
             "type": "Python Output"
         },
         {
             "level": "beginner",
             "question": "Which data type is used to store text in most programming languages?",
-            "options": [
-                "int",
-                "float",
-                "string",
-                "bool"
-            ],
+            "options": ["int", "float", "string", "bool"],
             "answer": 2,
             "type": "Theory"
         },
@@ -37,14 +27,24 @@
             "type": "Web Development"
         },
         {
+            "level": "beginner",
+            "question": "What symbol is commonly used to start a comment in Python?",
+            "options": ["//", "#", "/* */", "--"],
+            "answer": 1,
+            "type": "Python Basics"
+        },
+        {
+            "level": "beginner",
+            "question": "Which tag is used to insert an image in HTML?",
+            "options": ["<img>", "<image>", "<pic>", "<photo>"],
+            "answer": 0,
+            "type": "Web Development"
+        },
+
+        {
             "level": "intermediate",
             "question": "Which SQL command is used to remove a table completely?",
-            "options": [
-                "DELETE",
-                "DROP",
-                "REMOVE",
-                "CLEAR"
-            ],
+            "options": ["DELETE", "DROP", "REMOVE", "CLEAR"],
             "answer": 1,
             "type": "Databases"
         },
@@ -57,24 +57,29 @@
         {
             "level": "intermediate",
             "question": "What is the time complexity of binary search?",
-            "options": [
-                "O(n)",
-                "O(log n)",
-                "O(n log n)",
-                "O(1)"
-            ],
+            "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
             "answer": 1,
             "type": "Algorithms"
         },
         {
+            "level": "intermediate",
+            "question": "Which HTTP method is typically used to update an existing resource?",
+            "options": ["GET", "POST", "PUT", "DELETE"],
+            "answer": 2,
+            "type": "Web Development"
+        },
+        {
+            "level": "intermediate",
+            "question": "In Python, what is the output of len([1, 2, 3, [4, 5]])?",
+            "options": ["4", "5", "6", "3"],
+            "answer": 0,
+            "type": "Python"
+        },
+
+        {
             "level": "advanced",
             "question": "What is the Big-O complexity of the best case for quicksort?",
-            "options": [
-                "O(n²)",
-                "O(n log n)",
-                "O(log n)",
-                "O(n)"
-            ],
+            "options": ["O(n²)", "O(n log n)", "O(log n)", "O(n)"],
             "answer": 1,
             "type": "Algorithms"
         },
@@ -89,6 +94,18 @@
             "question": "What is the term for a function that calls itself during execution?",
             "answer": "recursion",
             "type": "Programming Concepts"
+        },
+        {
+            "level": "advanced",
+            "question": "What technique allows a program to continue running while waiting for I/O operations?",
+            "answer": "asynchronous programming",
+            "type": "Programming Concepts"
+        },
+        {
+            "level": "advanced",
+            "question": "In databases, what is the term for ensuring that multiple transactions occur safely without interfering with each other?",
+            "answer": "concurrency control",
+            "type": "Databases"
         }
     ]
 }
