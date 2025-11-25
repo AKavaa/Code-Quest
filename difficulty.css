@@ -56,7 +56,7 @@ body {
     color: var(--primary-color);
     padding: 10px 25px;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
@@ -64,7 +64,7 @@ body {
 
     position: absolute;
     top: 50px;
-    right: 50px;
+    right: 13.5px;
 
 
 
