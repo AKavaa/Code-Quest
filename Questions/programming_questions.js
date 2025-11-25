@@ -173,7 +173,7 @@ function moveToNextQuestion() {
 // End the quiz and display the final score
 function endQuiz() {
     const questionContainer = document.querySelector('.question-container');
-    const percentage = (score / currentQuestions.length) * 100;
+
 
     if (score === 0) {
 
@@ -181,7 +181,7 @@ function endQuiz() {
         <div class="quiz-complete">
             <h2>🫤 You are more than that</h2>
             <p>Your final score: ${score} out of ${currentQuestions.length}</p>
-            <p>Percentage: ${percentage.toFixed(2)}%</p>
+
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
             </button>
@@ -193,7 +193,7 @@ function endQuiz() {
         <div class="quiz-complete">
             <h2> 😔 You can do better than that!</h2>
             <p>Your final score: ${score} out of ${currentQuestions.length}</p>
-            <p>Percentage: ${percentage.toFixed(2)}%</p>
+
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
             </button>
@@ -208,7 +208,7 @@ function endQuiz() {
         <div class="quiz-complete">
             <h2> 😌 Very close to perfection!</h2>
             <p>Your final score: ${score} out of ${currentQuestions.length}</p>
-            <p>Percentage: ${percentage.toFixed(2)}%</p>
+
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
             </button>
@@ -221,7 +221,7 @@ function endQuiz() {
         <div class="quiz-complete">
             <h2> 🎉 Quiz Completed!</h2>
             <p>Your final score: ${score} out of ${currentQuestions.length}</p>
-            <p>Percentage: ${percentage.toFixed(2)}%</p>
+
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
             </button>
