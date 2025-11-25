@@ -6,7 +6,7 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Get the difficulty from the current page URL
+// Get the difficulty from the current page URL, and the appropeitae questions are shown
 function getDifficulty() {
     const path = window.location.pathname;
     console.log("Current path:", path); // DEBUG
@@ -49,7 +49,7 @@ function loadQuestionsFromJSON() {
 // Load and display questions for the current difficulty
 function loadQuestionsForDifficulty() {
     const difficulty = getDifficulty();
-    console.log("Loading difficulty:", difficulty); // DEBUG
+
 
     currentQuestions = locked_questions.iq_questions.filter(q => q.level === difficulty);
     console.log("Questions found:", currentQuestions.length); // DEBUG
