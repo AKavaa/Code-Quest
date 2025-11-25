@@ -36,7 +36,6 @@ function loadQuestionsFromJSON() {
             return response.json();
         })
         .then(data => {
-            console.log("Data received:", data); // DEBUG
             locked_questions = data;
             loadQuestionsForDifficulty();
         })
@@ -122,6 +121,8 @@ function checkAnswer(selectedIndex) {
         optionButtons[question.answer].classList.add('correct');
     }
 
+
+    // move to the next question
     setTimeout(() => {
         moveToNextQuestion();
     }, 1500);
@@ -172,6 +173,9 @@ function moveToNextQuestion() {
 function endQuiz() {
     const questionContainer = document.querySelector('.question-container');
     const percentage = (score / currentQuestions.length) * 100;
+
+
+    // if statements to give out the correct message versions 
 
     if (score === 0) {
 
