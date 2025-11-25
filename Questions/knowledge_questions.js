@@ -1,4 +1,5 @@
 const KNOWLEDGE_Q = '../Questions/general_knowledge_questions.json';
+const MAX_SCORE = 100;
 
 let locked_questions = {};
 let currentQuestions = [];
