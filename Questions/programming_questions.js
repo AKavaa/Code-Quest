@@ -5,6 +5,8 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
+
+
 // Get the difficulty from the current page URL
 function getDifficulty() {
     const path = window.location.pathname;
@@ -47,12 +49,14 @@ function loadQuestionsFromJSON() {
 }
 
 // Load and display questions for the current difficulty
+
+let max_score = 0;
 function loadQuestionsForDifficulty() {
     const difficulty = getDifficulty();
-    console.log("Loading difficulty:", difficulty); // DEBUG
+
 
     currentQuestions = locked_questions.programming_questions.filter(q => q.level === difficulty);
-    console.log("Questions found:", currentQuestions.length); // DEBUG
+    max_score = currentQuestions.length * 20;
 
     currentQuestionIndex = 0;
     score = 0;
@@ -180,7 +184,7 @@ function endQuiz() {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2>🫤 You are more than that</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${max_score}</p>
 
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
@@ -188,11 +192,11 @@ function endQuiz() {
         </div>
     `
 
-    } else if (score <= 1) {
+    } else if (score <= 20) {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😔 You can do better than that!</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${max_score}</p>
 
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
@@ -202,12 +206,12 @@ function endQuiz() {
 
     }
 
-    else if (score <= 2) {
+    else if (score <= 40) {
 
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😌 Very close to perfection!</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${max_score}</p>
 
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
@@ -220,7 +224,7 @@ function endQuiz() {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 🎉 Quiz Completed!</h2>
-            <p>Your final score: ${score} out of ${currentQuestions.length}</p>
+            <p>Your final score: ${score} out of ${max_score}</p>
 
             <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
                 Back to Main Section
