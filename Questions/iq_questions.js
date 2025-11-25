@@ -1,3 +1,4 @@
+// Variable to store the JSON file path to use afterwards 
 const QUESTIONS_JSON = '../Questions/questions_iq.json';
 
 let locked_questions = {};
