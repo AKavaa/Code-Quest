@@ -180,26 +180,26 @@ function endQuiz() {
     const questionContainer = document.querySelector('.question-container');
 
 
-    if (score === 0) {
+    if (score <= 20) {
 
         questionContainer.innerHTML = `
         <div class="quiz-complete">
-            <h2>🫤 You are more than that</h2>
-            <p>Your final score: ${score} out of ${MAX_SCORE} points</p>
+            <h2>🫤 Try one more time</h2>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
-            <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
+            <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
             </button>
         </div>
     `
 
-    } else if (score <= 20) {
+    } else if (score <= 40) {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😔 You can do better than that!</h2>
-            <p>Your final score: ${score} out of ${MAX_SCORE} points</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
-            <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
+            <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
             </button>
         </div>
@@ -207,35 +207,33 @@ function endQuiz() {
 
     }
 
-    else if (score <= 40) {
+    else if (score <= 90) {
 
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 😌 Very close to perfection!</h2>
-            <p>Your final score: ${score} out of ${MAX_SCORE} points</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
-            <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
+            <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
             </button>
         </div>
     `;
 
     }
-    else {
+    else if (score === 100) {
         questionContainer.innerHTML = `
         <div class="quiz-complete">
             <h2> 🎉 Quiz Completed!</h2>
-            <p>Your final score: ${score} out of ${MAX_SCORE} points</p>
+            <p>Your final score: ${score} out of ${MAX_SCORE}</p>
 
-            <button onclick="window.location.href='./main_page_select.html'" class="restart-btn">
+            <button onclick="window.location.href='./select_main_page.html'" class="restart-btn">
                 Back to Main Section
             </button>
         </div>
     `;
 
     }
-
-
 
 
 }
