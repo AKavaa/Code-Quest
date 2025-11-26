@@ -1,0 +1,227 @@
+body {
+    color: var(--text-color);
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.profile-title {
+    text-align: center;
+}
+
+.profile-title h1 {
+    margin-bottom: 0.25rem;
+}
+
+.profile-tagline {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.profile-identity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(67, 97, 238, 0.15);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(76, 201, 240, 0.15);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.profile-identity .label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+
+.cta-btn {
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.25);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.summary-card {
+    background: white;
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(67, 97, 238, 0.1);
+    text-align: center;
+}
+
+.summary-card i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.summary-card .label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #6c757d;
+}
+
+.summary-card .value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.emptyState {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.emptyState.hidden {
+    display: none;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
+}
+
+.category-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category-header i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: rgba(67, 97, 238, 0.15);
+    padding: 0.75rem;
+    border-radius: 12px;
+}
+
+.category-header h3 {
+    margin-bottom: 0.15rem;
+}
+
+.category-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.difficulty-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.difficulty-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 0.9rem;
+    background: rgba(248, 249, 255, 0.7);
+}
+
+.difficulty-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.chip {
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.chip.success {
+    background: rgba(76, 175, 80, 0.15);
+    color: #2e7d32;
+}
+
+.chip.danger {
+    background: rgba(244, 67, 54, 0.15);
+    color: #c62828;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.score-row strong {
+    font-size: 1.1rem;
+}
+
+.attempts {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .profile-identity {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}

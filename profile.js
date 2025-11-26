@@ -18,5 +18,5 @@ function profileRender() {
     const playerName = document.getElementById('player_name');
     const profileSummary = document.getElementById('profile_summary');
     const stateOfquiz = document.getElementById('emptyState');
-    const username = localStorage.localS
+    const username = localStorage.localStor
 }
