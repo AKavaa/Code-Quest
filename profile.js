@@ -16,7 +16,9 @@ function profileRender() {
     const playerName = document.getElementById('player_name');
     const profileSummary = document.getElementById('profile_summary');
     const stateOfquiz = document.getElementById('emptyState');
+    // local storage saves the name and displays is appropriately 
     const username = localStorage.getItem("username");
+    localStorage.setItem("username", username);
     const categoryContainer = document.getElementById('category_stats');
 
 
@@ -33,6 +35,8 @@ function profileRender() {
     }
 
     playerName.textContent = username;
+    // hide the state wehn the user inputs and exists
+    stateOfquiz.classList.add('hidden');
 
     const profile_wind = window.CodeQuestProfile;
     if (!profile_wind) {
@@ -71,3 +75,4 @@ function buildSummary(userStats) {
 
 
 }
+
