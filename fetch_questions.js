@@ -52,5 +52,44 @@ function getDifficulty() {
     if (path.includes('second_box') || path.includes('intermediate')) return 'intermediate';
     if (path.includes('third_box') || path.includes('advanced')) return 'advanced';
 
-    return 'beginner' // default section 
+    return 'beginner'; // default section 
 }
+
+
+// Initialiazing the quiz setup
+document.addEventListener('DOMContentLoaded', async () => {
+    await load_all_questions();
+    load_questions_for_difficulty();
+});
+
+
+async function load_all_questions() {
+    try {
+        const responses = await Promise.all([ // runnign multiple requests in parallel, fetching 
+            fetch(QUESTIONS_JSON_IQ),           // from all the JSONs 
+            fetch(QUESTIONS_JSON_KNOWLEDGE),
+            fetch(QUESTIONS_JSON_PROGRAMMING)
+        ]);
+        // looping through the JSONd and checking if the questions are fetched ok
+        const data = await Promise.all(responses.map(r => {
+            if (!r.ok) throw new Error(`HTTP error ${r.status}`);
+            return r.json();
+        }));
+
+        // 0 -> IQ Questions
+        // 1 -> knowledge Questions
+        // 2 -> programming Questions
+        locked_questions = {
+            iq: data[0].iq_questions || [],
+            knowledge: data[1].general_knowledge_questions || [],
+            programming: data[2].programming_questions || []
+        };
+    }
+    catch (err) {
+        console.log("Failed to load all the questions", err);
+    }
+
+}
+
+
+
