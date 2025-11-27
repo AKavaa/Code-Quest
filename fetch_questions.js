@@ -92,4 +92,7 @@ async function load_all_questions() {
 }
 
 
-
+function load_questions_for_difficulty() {
+    const category = getCategory();
+    const difficulty = getCategory();
+}
