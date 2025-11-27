@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="./profile.css">
-    <link rel="stylesheet" href="./difficulty.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <head>
     <meta charset="UTF-8">
-    <title> Player's Profile</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; }
-        table { border-collapse: collapse; margin-bottom: 20px; }
-        td, th { border: 1px solid #ccc; padding: 8px; text-align: center; }
-        h2 { margin-top: 40px; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Player's Profile</title>
 </head>
 <body>
     <main class="profile-wrapper">
+     
         <section class="profile-section profile-hero">
             <div class="hero-content">
-        
                 <h1>Your Quiz Stats</h1>
                 <p class="subtitle">Track your progress across all categories and levels.</p>
                 <div class="hero-actions">
@@ -33,18 +25,21 @@
                     </button>
                 </div>
             </div>
+            
+            <!-- Player Card - MERGED HERE -->
             <div class="hero-card">
                 <div class="profile-avatar">
-                   <i class="fas fa-solid fa-person"></i>
+                    <i class="fas fa-solid fa-person"></i>
                 </div>
                 <div>
-                    <p class="label"> player</p>
+                    <p class="label">PLAYER</p>
                     <h2 id="player_name">Guest</h2>
                 </div>
             </div>
         </section>
 
-       
+        <!-- Category Toolbar -->
+        <section class="profile-section">
             <div class="category-toolbar" aria-label="Category filters">
                 <button class="category-btn" data-category="iq">
                     <span>IQ Challenge</span>
@@ -61,13 +56,14 @@
             </div>
         </section>
 
+        <!-- Stats Section -->
         <section class="profile-section stats-section">
             <header class="section-heading">
-                <p class="label">Performance</p>
+                <p class="label">YOUR PERFORMANCE</p>
                 <h3>Detailed breakdown</h3>
                 <p>Each table shows your correct, wrong, and total answers per level.</p>
             </header>
-            <section id="stats-container" class="stats-surface" aria-live="polite"></section>
+            <div id="stats-container" class="stats-surface" aria-live="polite"></div>
         </section>
     </main>
 
