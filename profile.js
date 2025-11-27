@@ -1,3 +1,6 @@
+let active_category = null;
+
+
 const summary_templates = [
     {
         id: 'correct', label: 'Correct answers', icon: 'fa-check-circle', accessor: stats => stats.correct

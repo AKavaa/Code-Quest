@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="./difficulty.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- 
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./difficulty.css">
-    <link rel="stylesheet" href="./profile.css">
-    <title>Player's Profile</title>
+    <title> Player's Profile</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        table { border-collapse: collapse; margin-bottom: 20px; }
+        td, th { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        h2 { margin-top: 40px; }
+    </style>
 </head>
 <body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <div class="container">
-        <div class="logo">
-            <img src="./assets/images/Code-Quest.JPG" alt="Code Quest Logo" class="logo-image">
-        </div>
-        <div>
-            <h1>Player's <span>Profile</span></h1>
-            <p class="profile-progress"> Monitor your progress accross every challenge</p>
-            <button class="back-btn" onclick="window.location.href='./difficulty.html'">
-            <i class="fas fa-arrow-left"></i> Back to difficulty section
-            </button>
-        </div>
-
-        <section class="profile-identity">
-            <div class="profile-avatar">
-                <i class="fa-solid fa-person"></i>
-            </div>
-
-
-        <div>
-              <p class="label">
-            Player
-        </p>
-        <h2 id="player_name"> Guest</h2>
-        </div>
-             </section>
-
-
-        <section id="profile_summary">
-            <!-- The JS code will be inserted here -->
-        </section>
-
-        <p class="emptyState" id="emptyState">
-            Take a quiz to unlock your data
-        </p>
-
-        <section class="category-grid" id="category_stats">
-
-        </section>
-
-        </div>
+    <main class="profile-wrapper">
+        <section class="profile-section profile-hero">
+            <div class="hero-content">
         
+                <h1>Your Quiz Stats</h1>
+                <p class="subtitle">Track your progress across all categories and levels.</p>
+                <div class="hero-actions">
+                    <button class="cta-button primary" onclick="window.location.href='./difficulty.html'">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Difficulty menu
+                    </button>
+                    <button id="resetProgress" class="cta-button ghost">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset progress
+                    </button>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="profile-avatar">
+                   <i class="fas fa-solid fa-person"></i>
+                </div>
+                <div>
+                    <p class="label"> player</p>
+                    <h2 id="player_name">Guest</h2>
+                </div>
+            </div>
+        </section>
+
        
+            <div class="category-toolbar" aria-label="Category filters">
+                <button class="category-btn" data-category="iq">
+                    <span>IQ Challenge</span>
+                    <small>Iq questions</small>
+                </button>
+                <button class="category-btn" data-category="knowledge">
+                    <span>General Knowledge</span>
+                    <small>everyday practice</small>
+                </button>
+                <button class="category-btn" data-category="programming">
+                    <span>Programming</span>
+                    <small>Code mastery</small>
+                </button>
+            </div>
+        </section>
+
+        <section class="profile-section stats-section">
+            <header class="section-heading">
+                <p class="label">Performance</p>
+                <h3>Detailed breakdown</h3>
+                <p>Each table shows your correct, wrong, and total answers per level.</p>
+            </header>
+            <section id="stats-container" class="stats-surface" aria-live="polite"></section>
+        </section>
+    </main>
+
+    <script src="./fetch_questions.js"></script>
+    <script src="./profile.js"></script>
 </body>
-<script src="./profile.js"></script>
 </html>
