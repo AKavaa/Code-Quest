@@ -94,7 +94,7 @@ async function load_all_questions() {
 
 function load_questions_for_difficulty() {
     const category = getCategory();
-    const difficulty = getCategory();
+    const difficulty = getDifficulty();
 
 
     // questions are being stores inside the variabkle, and selects those that mathch the current level
@@ -109,8 +109,8 @@ function load_questions_for_difficulty() {
 
 
     if (!currentQuestions.length) {
-        displayError(` There are no questions found for the category "${catgory}" and level "${difficulty}"`);
-        return; display_current_questions();
+        displayError(`There are no questions found for the category "${category}" and level "${difficulty}"`);
+        return;
     }
     display_current_questions();
 }
@@ -207,9 +207,9 @@ function checkTextAnswer() {
     const difficulty = getDifficulty();
     const question = currentQuestions[currentQuestionIndex];
 
-    const input = document.getElementById('.answer-input');
+    const input = document.getElementById('answer-input');
 
-    const user_answer = input.ariaValueMax.trim().toLowerCase();
+    const user_answer = input.value.trim().toLowerCase();
     const correct_answer = question.answer.toString().toLowerCase();
 
     input.disabled = true;
