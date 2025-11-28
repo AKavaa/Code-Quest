@@ -115,6 +115,53 @@ function load_questions_for_difficulty() {
     display_current_questions();
 }
 
+
+// function to display the current questions
 function display_current_questions() {
+
+    if (!currentQuestions.length)
+        return;
+
+    // variable questions gets the current position from the filtred questions list
+    const question = currentQuestions[currentQuestionIndex];
+
+    // where the questions will be displayed
+    const container = document.querySelector('.question-container');
+
+
+    if (!container)
+        return;
+
+    // storing the multiple choice questions
+    const is_multiple_choice = question.options && question.options.length > 0;
+
+    if (!is_multiple_choice) {
+
+        // displays the current questions and its options 
+
+        // checkAnswer function checks if the given answer was correct or wrong and moves to the next question
+        container.innerHTML = `
+          <h2>Question ${currentQuestionIndex + 1} of ${currentQuestions.length}</h2>
+            <p class="question">${question.question}</p>
+            <div class="options">
+            
+                ${question.options.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+            </div>
+            <p class="score">Score: ${score}</p>
+        `;
+    } else {
+        container.innerHTML = `
+            <h2>Question ${currentQuestionIndex + 1} of ${currentQuestions.length}</h2>
+            <p class="question">${question.question}</p>
+            <div class="input-container">
+                <input type="text" id="answer-input" placeholder="Type your answer"/>
+                <button class="submit-btn" onclick="checkTextAnswer()">Submit</button>
+            </div>
+            <p class="score">Score: ${score}</p>
+        `;
+    }
+
+
+
 
 }
