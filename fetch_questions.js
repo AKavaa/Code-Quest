@@ -242,3 +242,60 @@ function checkTextAnswer() {
     // move to next question after 2 secs
     setTimeout(moveToNextQuestion, 2000)
 }
+
+function moveToNextQuestion() {
+
+    // the function moves the next question in the quiz
+    // if thr question is the last one, is will end the quiz 
+    currentQuestionIndex++;
+    // if statement to chekck if reacked the final question of the quiz
+    if (currentQuestionIndex >= currentQuestions.length) {
+        // end quiz or display the next question
+        end_quiz();
+    } else {
+        display_current_questions();
+    }
+}
+
+
+function end_quiz() {
+
+
+    const container = document.querySelector('.question-container');
+    const category = getCategory();
+    const difficulty = getDifficulty();
+
+    // this is the text that will be shown at the end of the quixz
+
+    // displays the correct and wrong questions at the end 
+    //and calculates the total stats 
+
+    container.innerHTML = `
+        <div class="quiz-complete">
+            <h2>🎉 Quiz Completed!</h2>
+            <p>Your Score: ${score} / ${MAX_SCORE}</p>
+
+        
+            <h3>📘 This Quiz</h3>
+            <p>Correct: ${correct_count}</p>
+            <p>Wrong: ${wrong_count}</p>
+
+            <h3>📊 Total Stats (${category} - ${difficulty})</h3>
+            <p>Total Correct: ${quizStats[category][difficulty].correct}</p>
+            <p>Total Wrong: ${quizStats[category][difficulty].wrong}</p>
+
+            <button onclick="window.location.href='./select_main_page.html'">Back to Main Section</button>
+        </div>
+    `;
+
+
+}
+
+
+// function of error message showing 
+function displayError(message) {
+    const container = document.querySelector('.question-container');
+
+    container.innerHTML = `<div class="error-message"> <p> ${message} </p> </div>`;
+
+}
