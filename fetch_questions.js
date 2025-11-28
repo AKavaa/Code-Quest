@@ -1,4 +1,4 @@
-const MAX_SCORE = 100;
+const MAX_SCORE = currentQuestions.length * 20;
 
 // Variables holding the JSON file path so they can be used to fetch questions appropriately
 const QUESTIONS_JSON_IQ = '../Questions/questions_iq.json';
@@ -135,7 +135,7 @@ function display_current_questions() {
     // storing the multiple choice questions
     const is_multiple_choice = question.options && question.options.length > 0;
 
-    if (!is_multiple_choice) {
+    if (is_multiple_choice) {
 
         // displays the current questions and its options 
 
