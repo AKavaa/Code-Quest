@@ -12,18 +12,29 @@ const summary_templates = [
 ];
 
 
-document.addEventListener('DOMContentLoaded', profileRender);
+document.addEventListener('DOMContentLoaded', () => {
+    render_profile();
+
+});
 
 // Renders the needed section for the profileo so the user can see their stats
-function profileRender() {
-    const playerName = document.getElementById('player_name');
-    const profileSummary = document.getElementById('profile_summary');
-    const stateOfquiz = document.getElementById('emptyState');
-    // local storage saves the name and displays is appropriately 
-    const username = localStorage.getItem("username");
-    localStorage.setItem("username", username);
-    const categoryContainer = document.getElementById('category_stats');
+// function profileRender() {
+//     const playerName = document.getElementById('player_name');
+//     const profileSummary = document.getElementById('profile_summary');
+//     const stateOfquiz = document.getElementById('emptyState');
+//     // local storage saves the name and displays is appropriately 
+//     const username = localStorage.getItem("username");
+//     localStorage.setItem("username", username);
+//     const categoryContainer = document.getElementById('category_stats');
 
+document.addEventListener('DOMContentLoaded', () => {
+    render_profile();
+});
+
+
+function render_profile() {
+    const username = localStorage.getItem("username");
+    document.getElementById("player_name").textContent = username ? username : "Guest";
 
     if (!playerName || !profileSummary || !categoryContainer || !stateOfquiz) {
         return;
@@ -54,8 +65,8 @@ function profileRender() {
 
     renderSummaryCards(profileSummary, summary);
     renderCategoryCards(categoryContainer, userStats);
-
 }
+
 
 function buildSummary(userStats) {
     let correct = 0;

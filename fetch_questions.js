@@ -14,16 +14,17 @@ let score = 0;
 let correct_count = 0;
 let wrong_count = 0;
 
+
+// event listener so the DOM is loading the username with the render_profile function
 document.addEventListener('DOMContentLoaded', () => {
     render_profile();
 });
 
 
-// event listener so the DOM is loading the username with the render_profile function
 function render_profile() {
     const username = localStorage.getItem("username");
     document.getElementById("player_name").textContent = username ? username : "Guest";
-};
+}
 
 // the stats are saved inside the local storage and after displayed
 let quiz_stats = JSON.parse(localStorage.getItem("quiz_stats")) || {
