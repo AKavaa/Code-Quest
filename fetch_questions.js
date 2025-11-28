@@ -160,8 +160,85 @@ function display_current_questions() {
             <p class="score">Score: ${score}</p>
         `;
     }
+}
 
 
 
+// function checks the multiple choice asnwers if correct or wrong
+// tracks the score and the question's correct or wrong count
+// lose or gain points with the score variable
+function checkAnswer(selectedIndex) {
 
+    const category = getCategory();
+    const difficulty = getDifficulty();
+    const question = currentQuestions[currentQuestionIndex];
+
+    const buttons = document.querySelectorAll('.option-btn');
+
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (selectedIndex === question.answer) {
+
+        score += 20;
+        correct_count++;
+
+        quiz_stats[category][difficulty].correct++;
+        buttons[selectedIndex].classList.add('correct');
+
+    } else {
+        score -= 10;
+        wrong_count++;
+        quiz_stats[category][difficulty].wrong++;
+        buttons[selectedIndex].classList.add('wrong');
+        // highlights the correct answer 
+        buttons[question.answer]?.classList.add('correct');
+    }
+    localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
+    // move to next question after 1.5 secs
+    setTimeout(moveToNextQuestion, 1500)
+}
+
+
+// approximately the same function as above but for the user input
+// the logic is the same 
+function checkTextAnswer() {
+
+    const category = getCategory();
+    const difficulty = getDifficulty();
+    const question = currentQuestions[currentQuestionIndex];
+
+    const input = document.getElementById('.answer-input');
+
+    const user_answer = input.ariaValueMax.trim().toLowerCase();
+    const correct_answer = question.answer.toString().toLowerCase();
+
+    input.disabled = true;
+    document.querySelector('.submit-btn').disabled = true;
+
+    if (user_answer === correct_answer) {
+
+        score += 20;
+        correct_count++;
+
+        quiz_stats[category][difficulty].correct++;
+        input.style.borderColor = '#4CAF50';
+
+
+    } else {
+        score -= 10;
+        wrong_count++;
+        quiz_stats[category][difficulty].wrong++;
+        input.style.borderColor = '#f44336';
+        // highlights the correct answer 
+
+        // if the answer was wronf it will show to correct one inside the small input box 
+        setTimeout(() => input.value = `Correct: ${question.answer}`, 500)
+    }
+    localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
+    // move to next question after 1.5 secs
+    setTimeout(moveToNextQuestion, 1500)
+
+    localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
+    // move to next question after 2 secs
+    setTimeout(moveToNextQuestion, 2000)
 }
