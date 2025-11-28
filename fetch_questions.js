@@ -12,7 +12,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 let correct_count = 0;
-let worng_count = 0;
+let wrong_count = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     render_profile();
@@ -95,4 +95,26 @@ async function load_all_questions() {
 function load_questions_for_difficulty() {
     const category = getCategory();
     const difficulty = getCategory();
+
+
+    // questions are being stores inside the variabkle, and selects those that mathch the current level
+    // and diffiuclty
+    currentQuestions = locked_questions[category].filter(q => q.level === difficulty);
+
+    currentQuestionIndex = 0;
+    score = 0;
+    wrong_count = 0;
+    correct_count = 0;
+
+
+
+    if (!currentQuestions.length) {
+        displayError(` There are no questions found for the category "${catgory}" and level "${difficulty}"`);
+        return; display_current_questions();
+    }
+    display_current_questions();
+}
+
+function display_current_questions() {
+
 }
