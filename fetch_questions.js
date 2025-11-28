@@ -281,8 +281,8 @@ function end_quiz() {
             <p>Wrong: ${wrong_count}</p>
 
             <h3>📊 Total Stats (${category} - ${difficulty})</h3>
-            <p>Total Correct: ${quizStats[category][difficulty].correct}</p>
-            <p>Total Wrong: ${quizStats[category][difficulty].wrong}</p>
+            <p>Total Correct: ${quiz_stats[category][difficulty].correct}</p>
+            <p>Total Wrong: ${quiz_stats[category][difficulty].wrong}</p>
 
             <button onclick="window.location.href='./select_main_page.html'">Back to Main Section</button>
         </div>
