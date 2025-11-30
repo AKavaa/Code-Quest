@@ -1,4 +1,4 @@
-const MAX_SCORE = currentQuestions.length * 20;
+// const MAX_SCORE = currentQuestions.length * 20;
 
 
 // Variables holding the JSON file path so they can be used to fetch questions appropriately
@@ -267,6 +267,7 @@ function moveToNextQuestion() {
 
 
 
+
 function end_quiz() {
 
 
@@ -284,7 +285,7 @@ function end_quiz() {
     container.innerHTML = `
         <div class="quiz-complete">
             <h2>🎉 Quiz Completed!</h2>
-            <p>Your Score: ${score} / ${getMAX_SCORE()}</p>
+            <p>Your Score: ${score} / 100 </p>
 
         
             <h3>📘 This Quiz</h3>
