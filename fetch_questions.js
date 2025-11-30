@@ -1,4 +1,4 @@
-// const MAX_SCORE = currentQuestions.length * 20;
+const MAX_SCORE = currentQuestions.length * 20;
 
 
 // Variables holding the JSON file path so they can be used to fetch questions appropriately
@@ -15,11 +15,6 @@ let score = 0;
 let correct_count = 0;
 let wrong_count = 0;
 
-function getMAX_SCORE() {
-
-
-    MAX_SCORE = currentQuestions.length * 20;
-}
 
 
 // event listener so the DOM is loading the username with the render_profile function
