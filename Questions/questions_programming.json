@@ -36,7 +36,7 @@
         {
             "level": "beginner",
             "question": "Which tag is used to insert an image in HTML?",
-            "options": ["<img>", "<image>", "<pic>", "<photo>"],
+            "options": ["img", "image", "pic", "photo"],
             "answer": 0,
             "type": "Web Development"
         },
