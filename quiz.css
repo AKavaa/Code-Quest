@@ -219,7 +219,7 @@ h1 span {
     flex-wrap: wrap;
 }
 
-.answer-input {
+#answer-input {
     background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 255, 255, 0.2);
     padding: 0.8rem 1.2rem;
@@ -230,14 +230,14 @@ h1 span {
     transition: var(--transition);
 }
 
-.answer-input:focus {
+#answer-input:focus {
     border-color: var(--primary-color);
     background: rgba(255, 255, 255, 1);
     outline: none;
     box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
 }
 
-.answer-input::placeholder {
+#answer-input::placeholder {
     color: rgba(43, 45, 66, 0.6);
 }
 

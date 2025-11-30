@@ -1,4 +1,5 @@
-const MAX_SCORE = currentQuestions.length * 20;
+// const MAX_SCORE = currentQuestions.length * 20;
+
 
 // Variables holding the JSON file path so they can be used to fetch questions appropriately
 const QUESTIONS_JSON_IQ = '../Questions/questions_iq.json';
@@ -13,6 +14,12 @@ let score = 0;
 
 let correct_count = 0;
 let wrong_count = 0;
+
+function getMAX_SCORE() {
+
+
+    MAX_SCORE = currentQuestions.length * 20;
+}
 
 
 // event listener so the DOM is loading the username with the render_profile function
@@ -94,6 +101,7 @@ async function load_all_questions() {
 
 
 function load_questions_for_difficulty() {
+
     const category = getCategory();
     const difficulty = getDifficulty();
 
@@ -130,8 +138,11 @@ function display_current_questions() {
     const container = document.querySelector('.question-container');
 
 
-    if (!container)
+    if (!container) {
         return;
+
+    }
+
 
     // storing the multiple choice questions
     const is_multiple_choice = question.options && question.options.length > 0;
@@ -239,24 +250,26 @@ function checkTextAnswer() {
     // move to next question after 1.5 secs
     setTimeout(moveToNextQuestion, 1500)
 
-    localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
-    // move to next question after 2 secs
-    setTimeout(moveToNextQuestion, 2000)
+    // localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
+    // // move to next question after 2 secs
+    // setTimeout(moveToNextQuestion, 2000)
 }
 
 function moveToNextQuestion() {
 
-    // the function moves the next question in the quiz
-    // if thr question is the last one, is will end the quiz 
-    currentQuestionIndex++;
-    // if statement to chekck if reacked the final question of the quiz
+    currentQuestionIndex++; // move to next question
+
+    // If we have reached the 4th question (index 3) or run out of questions → end quiz
     if (currentQuestionIndex >= currentQuestions.length) {
-        // end quiz or display the next question
         end_quiz();
-    } else {
-        display_current_questions();
+    }
+    else {
+        display_current_questions(); // show next question
     }
 }
+
+
+
 
 
 function end_quiz() {
@@ -271,10 +284,12 @@ function end_quiz() {
     // displays the correct and wrong questions at the end 
     //and calculates the total stats 
 
+
+
     container.innerHTML = `
         <div class="quiz-complete">
             <h2>🎉 Quiz Completed!</h2>
-            <p>Your Score: ${score} / ${MAX_SCORE}</p>
+            <p>Your Score: ${score} / ${getMAX_SCORE()}</p>
 
         
             <h3>📘 This Quiz</h3>
@@ -285,7 +300,7 @@ function end_quiz() {
             <p>Total Correct: ${quiz_stats[category][difficulty].correct}</p>
             <p>Total Wrong: ${quiz_stats[category][difficulty].wrong}</p>
 
-            <button onclick="window.location.href='./select_main_page.html'">Back to Main Section</button>
+            <button onclick="window.location.href='../difficulty.html'">Back to Difficulty Section</button>
         </div>
     `;
 
