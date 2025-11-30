@@ -1,19 +1,12 @@
 let active_category = null;
 
 
-const summary_templates = [
-    {
-        id: 'correct', label: 'Correct answers', icon: 'fa-check-circle', accessor: stats => stats.correct
-    },
-    {
-        id: 'wrong', label: 'Wrong answers', icon: 'fa-times-circle', accessor: stats => stats.wrong
-    },
-
-];
 
 
 document.addEventListener('DOMContentLoaded', () => {
     render_profile();
+    category_filters();
+    reset_button();
 
 });
 
@@ -80,13 +73,76 @@ function buildSummary(userStats) {
     });
 
     const totalAnswered = correct + wrong;
-    const accuracy = totalAnswered ? Math.round((correct / totalAnswered) * 100) : 0;
+
 
     return {
         correct,
         wrong,
     };
 
+
+}
+
+function reset_button() {
+    const resetbutton = document.getElementById('reset_progress');
+    if (!resetbutton) return;
+
+
+    resetbutton.addEventListener('click', () => {
+        // user has the decision to continue if sure, if the users wants to start again and the current stats to dissapear 
+        const shouldResetButton = confirm('Do you want to reset your progress?');
+        if (!shouldResetButton) return;
+
+
+        // removes the stats inside the local storage 
+        localStorage.removeItem("quiz_stats");
+
+        // display nothing because it was reset and the value is null 
+        displayStats(active_category);
+
+        alert("stats have been reset!")
+
+
+    })
+
+}
+
+function category_filters() {
+    const category_buttons = document.querySelectorAll('.category-btn');
+    if (!category_buttons.length) {
+        displayStats();
+        return;
+
+    }
+
+    category_buttons.forEach((category_buttons)), () => {
+        category_buttons.addEventListener('click', () => {
+            const category = category_buttons.dataset.categoty;
+            if (!category)
+                return;
+            current_category = category;
+            category_buttons.forEach(btn => btn.classList.toggle('active', btn == category_buttons));
+            displayStats(active_category);
+
+        });
+    };
+
+    category_buttons[0].click();
+
+}
+function display_stats() {
+    const container = document.getElementById('stats-container');
+    const quizStats = JSON.parse(localStorage.getItem('quiz_stats'));
+
+
+    if (!container) return;
+
+
+    let category_data;
+
+    if (category && quizStats[category]) {
+
+    }
 
 }
 
