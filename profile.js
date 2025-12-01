@@ -48,6 +48,8 @@ function reset_button() {
 
         display_stats(active_category);
         alert("Progress reset was successful!");
+
+        alert("Refresh the page so the modifications apply!");
     });
 }
 
