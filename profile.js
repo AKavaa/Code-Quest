@@ -1,185 +1,101 @@
 let active_category = null;
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     render_profile();
     category_filters();
     reset_button();
-
 });
 
-// Renders the needed section for the profileo so the user can see their stats
-// function profileRender() {
-//     const playerName = document.getElementById('player_name');
-//     const profileSummary = document.getElementById('profile_summary');
-//     const stateOfquiz = document.getElementById('emptyState');
-//     // local storage saves the name and displays is appropriately 
-//     const username = localStorage.getItem("username");
-//     localStorage.setItem("username", username);
-//     const categoryContainer = document.getElementById('category_stats');
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     render_profile();
-// });
-
-
+// ================== LOAD USERNAME & SHOW STATS ==================
 function render_profile() {
-    const username = localStorage.getItem("username");
-
+    let username = localStorage.getItem("username") || "Guest";
     const playerName = document.getElementById('player_name');
-    const profileSummary = document.getElementById('profile_summary');
-    const stateOfquiz = document.getElementById('emptyState');
-    const categoryContainer = document.getElementById('category_stats');
 
-    if (!playerName) {
-        return;
-    }
     playerName.textContent = username;
 
-    if (username === "Guest") {
-        stateOfquiz?.classList.remove('hidden');
-        profileSummary.innerHTML = " ";
-        categoryContainer.innerHTML = " ";
-        return;
-
-    }
-
-
-    // hide the state wehn the user inputs and exists
-    stateOfquiz?.classList.add('hidden');
-
-
-    // load the stats from local storage 
     const stats = JSON.parse(localStorage.getItem("quiz_stats"));
-    if (!stats) return;
+    if (!stats) return; // no stats saved yet -> avoid errors
 
-
-    display_stats();
-
-
+    display_stats(); // display all stats by default
 }
 
-const storedStats = profile_wind.getUserStats(username);
-const userStats = storedStats || profile_wind.createEmptyUserStats();
-const summary = buildSummary(userStats);
 
-renderSummaryCards(profileSummary, summary);
-renderCategoryCards(categoryContainer, userStats);
-
-
+// ================== SUMMARY HELPER ==================
 function buildSummary(userStats) {
-    let correct = 0;
-    let wrong = 0;
+    let correct = 0, wrong = 0;
 
     Object.values(userStats).forEach(category => {
-        Object.values(category).forEach(difficulty => {
-            correct += difficulty.correct || 0;
-            wrong += difficulty.wrong || 0;
+        Object.values(category).forEach(level => {
+            correct += level.correct || 0;
+            wrong += level.wrong || 0;
         });
     });
 
-    const totalAnswered = correct + wrong;
-
-
-    return {
-        correct,
-        wrong,
-    };
-
-
+    return { correct, wrong };
 }
 
+
+// ================== RESET BUTTON ==================
 function reset_button() {
     const resetbutton = document.getElementById('reset_progress');
     if (!resetbutton) return;
 
-
     resetbutton.addEventListener('click', () => {
-        // user has the decision to continue if sure, if the users wants to start again and the current stats to dissapear 
-        const shouldResetButton = confirm('Do you want to reset your progress?');
-        if (!shouldResetButton) return;
+        if (!confirm("Reset ALL statistics?")) return;
 
-
-        // removes the stats inside the local storage 
         localStorage.removeItem("quiz_stats");
-
-        // display nothing because it was reset and the value is null 
-        displayStats(active_category);
-
-        alert("stats have been reset!")
-
-
-    })
-
+        display_stats(active_category); // refresh UI
+        alert("Progress reset successfully!");
+    });
 }
 
+
+// ================== CATEGORY FILTER BUTTONS ==================
 function category_filters() {
-    const category_buttons = document.querySelectorAll('.category-btn');
-    if (!category_buttons.length) {
-        displayStats();
-        return;
+    const buttons = document.querySelectorAll('.category-btn');
+    if (!buttons.length) return;
 
-    }
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            active_category = btn.dataset.category;
 
-    category_buttons.forEach((category_buttons)), () => {
-        category_buttons.addEventListener('click', () => {
-            const category = category_buttons.dataset.categoty;
-            if (!category)
-                return;
-            current_category = category;
-            category_buttons.forEach(btn => btn.classList.toggle('active', btn == category_buttons));
-            displayStats(active_category);
+            buttons.forEach(b => b.classList.toggle("active", b === btn));
 
+            display_stats(active_category);
         });
-    };
+    });
 
-    category_buttons[0].click();
-
+    buttons[0].click(); // auto select first category
 }
+
+
+// ================== DISPLAY STATS TABLE ==================
 function display_stats(category) {
     const container = document.getElementById('stats-container');
-    const quizStats = JSON.parse(localStorage.getItem('quiz_stats'));
+    const stats = JSON.parse(localStorage.getItem("quiz_stats"));
+    if (!container || !stats) return;
 
+    const data = category ? { [category]: stats[category] } : stats;
 
-    if (!container) return;
+    let html = "";
+    for (const [cat, levels] of Object.entries(data)) {
+        html += `<h2>${cat.toUpperCase()}</h2>`;
+        html += `<table>
+                    <tr><th>Level</th><th>Correct</th><th>Wrong</th><th>Total</th></tr>`;
 
-
-    let category_data;
-
-    if (category && quizStats[category]) {
-        category_data = { [category]: quizStats[category] };
-
-    } else {
-
-        category_data = quizStats;
-    }
-
-
-
-    let html = '';
-    for (const [categoryName, levels] of Object.entries(category_data)) {
-        html += `<h2>${formatCategoryLabel(categoryName)}</h2>`;
-        html += '<table><tr><th>Level</th><th>Correct</th><th>Wrong</th><th>Total</th></tr>';
-
-        for (const [level, stats] of Object.entries(levels)) {
-            const total = stats.correct + stats.wrong;
+        for (const [level, s] of Object.entries(levels)) {
+            const total = s.correct + s.wrong;
             html += `
                 <tr>
-                    <td>${capitalize(level)}</td>
-                    <td>${stats.correct}</td>
-                    <td>${stats.wrong}</td>
+                    <td>${level}</td>
+                    <td>${s.correct}</td>
+                    <td>${s.wrong}</td>
                     <td>${total}</td>
-                </tr>
-            `;
-
+                </tr>`;
         }
 
-        html += '</table>';
-
+        html += `</table><br>`;
     }
+
     container.innerHTML = html;
-
-
 }
