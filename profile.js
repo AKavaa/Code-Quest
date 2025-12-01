@@ -24,6 +24,7 @@ function render_profile() {
 function buildSummary(userStats) {
     let correct = 0, wrong = 0;
 
+
     Object.values(userStats).forEach(category => {
         Object.values(category).forEach(level => {
             correct += level.correct || 0;
@@ -34,23 +35,23 @@ function buildSummary(userStats) {
     return { correct, wrong };
 }
 
-
-// ================== RESET BUTTON ==================
+// function to reset the stats 
 function reset_button() {
     const resetbutton = document.getElementById('reset_progress');
     if (!resetbutton) return;
 
     resetbutton.addEventListener('click', () => {
-        if (!confirm("Reset ALL statistics?")) return;
+        if (!confirm("Reset ALL your stats?")) return;
 
+        // removes all the info from local storage 
         localStorage.removeItem("quiz_stats");
-        display_stats(active_category); // refresh UI
-        alert("Progress reset successfully!");
+
+        display_stats(active_category);
+        alert("Progress reset was successful!");
     });
 }
 
-
-// ================== CATEGORY FILTER BUTTONS ==================
+//
 function category_filters() {
     const buttons = document.querySelectorAll('.category-btn');
     if (!buttons.length) return;
@@ -69,8 +70,9 @@ function category_filters() {
 }
 
 
-// ================== DISPLAY STATS TABLE ==================
+// function to display the stats that were saved inside the local storage
 function display_stats(category) {
+    // where stats will be displayed
     const container = document.getElementById('stats-container');
     const stats = JSON.parse(localStorage.getItem("quiz_stats"));
     if (!container || !stats) return;
@@ -78,11 +80,13 @@ function display_stats(category) {
     const data = category ? { [category]: stats[category] } : stats;
 
     let html = "";
+    // cat -> category 
     for (const [cat, levels] of Object.entries(data)) {
         html += `<h2>${cat.toUpperCase()}</h2>`;
         html += `<table>
                     <tr><th>Level</th><th>Correct</th><th>Wrong</th><th>Total</th></tr>`;
 
+        // s -> stats 
         for (const [level, s] of Object.entries(levels)) {
             const total = s.correct + s.wrong;
             html += `

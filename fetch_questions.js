@@ -296,7 +296,7 @@ function end_quiz() {
             <p>Total Correct: ${quiz_stats[category][difficulty].correct}</p>
             <p>Total Wrong: ${quiz_stats[category][difficulty].wrong}</p>
 
-            <button onclick="window.location.href='../difficulty.html'">Back to Difficulty Section</button>
+            <button class="back-btn" onclick="window.location.href='../difficulty.html'">Back to Category Selection</button>
         </div>
     `;
 
