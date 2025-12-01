@@ -51,11 +51,17 @@ function getCategory() {
 // function here will display the questions based on the current difficulty the user chooses
 function getDifficulty() {
     const path = window.location.pathname.toLowerCase();
-    if (path.includes('first_box') || path.includes('beginner')) return 'beginner';
-    if (path.includes('second_box') || path.includes('intermediate')) return 'intermediate';
-    if (path.includes('third_box') || path.includes('advanced')) return 'advanced';
+    // check the quiz difficulty based on the page name 
+    // differnt files use different names so this part determens that
+    if (path.includes("first_box")) return "beginner";
+    if (path.includes("second_box")) return "intermediate";
+    if (path.includes("third_box")) return "advanced";
 
-    return 'beginner'; // default section 
+    if (path.includes("beginner")) return "beginner";
+    if (path.includes("intermediate")) return "intermediate";
+    if (path.includes("advanced")) return "advanced";
+
+    return "beginner"; // default
 }
 
 
