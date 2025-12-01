@@ -20,45 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
 //     localStorage.setItem("username", username);
 //     const categoryContainer = document.getElementById('category_stats');
 
-document.addEventListener('DOMContentLoaded', () => {
-    render_profile();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     render_profile();
+// });
 
 
 function render_profile() {
     const username = localStorage.getItem("username");
-    document.getElementById("player_name").textContent = username ? username : "Guest";
 
-    if (!playerName || !profileSummary || !categoryContainer || !stateOfquiz) {
+    const playerName = document.getElementById('player_name');
+    const profileSummary = document.getElementById('profile_summary');
+    const stateOfquiz = document.getElementById('emptyState');
+    const categoryContainer = document.getElementById('category_stats');
+
+    if (!playerName) {
         return;
     }
-
-    if (!username) {
-        playerName.textContent = 'Guest player';
-        profileSummary.innerHTML = '';
-        categoryContainer.innerHTML = '';
-        stateOfquiz.classList.remove('hidden');
-        return;
-    }
-
     playerName.textContent = username;
-    // hide the state wehn the user inputs and exists
-    stateOfquiz.classList.add('hidden');
 
-    const profile_wind = window.CodeQuestProfile;
-    if (!profile_wind) {
+    if (username === "Guest") {
+        stateOfquiz?.classList.remove('hidden');
+        profileSummary.innerHTML = " ";
+        categoryContainer.innerHTML = " ";
         return;
+
     }
 
 
+    // hide the state wehn the user inputs and exists
+    stateOfquiz?.classList.add('hidden');
 
-    const storedStats = profile_wind.getUserStats(username);
-    const userStats = storedStats || profile_wind.createEmptyUserStats();
-    const summary = buildSummary(userStats);
 
-    renderSummaryCards(profileSummary, summary);
-    renderCategoryCards(categoryContainer, userStats);
+    // load the stats from local storage 
+    const stats = JSON.parse(localStorage.getItem("quiz_stats"));
+    if (!stats) return;
+
+
+    display_stats();
+
+
 }
+
+const storedStats = profile_wind.getUserStats(username);
+const userStats = storedStats || profile_wind.createEmptyUserStats();
+const summary = buildSummary(userStats);
+
+renderSummaryCards(profileSummary, summary);
+renderCategoryCards(categoryContainer, userStats);
 
 
 function buildSummary(userStats) {
@@ -130,7 +138,7 @@ function category_filters() {
     category_buttons[0].click();
 
 }
-function display_stats() {
+function display_stats(category) {
     const container = document.getElementById('stats-container');
     const quizStats = JSON.parse(localStorage.getItem('quiz_stats'));
 
@@ -141,8 +149,37 @@ function display_stats() {
     let category_data;
 
     if (category && quizStats[category]) {
+        category_data = { [category]: quizStats[category] };
 
+    } else {
+
+        category_data = quizStats;
     }
 
-}
 
+
+    let html = '';
+    for (const [categoryName, levels] of Object.entries(category_data)) {
+        html += `<h2>${formatCategoryLabel(categoryName)}</h2>`;
+        html += '<table><tr><th>Level</th><th>Correct</th><th>Wrong</th><th>Total</th></tr>';
+
+        for (const [level, stats] of Object.entries(levels)) {
+            const total = stats.correct + stats.wrong;
+            html += `
+                <tr>
+                    <td>${capitalize(level)}</td>
+                    <td>${stats.correct}</td>
+                    <td>${stats.wrong}</td>
+                    <td>${total}</td>
+                </tr>
+            `;
+
+        }
+
+        html += '</table>';
+
+    }
+    container.innerHTML = html;
+
+
+}
