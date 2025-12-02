@@ -73,7 +73,7 @@ function category_filters() {
 }
 
 function display_score(){
-    const score = document.getElementById(''); // add the html element for the function to display 
+    const score = document.getElementById('highest_score'); // add the html element for the function to display 
 
 
 }
