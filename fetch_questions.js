@@ -15,11 +15,50 @@ let score = 0;
 let correct_count = 0;
 let wrong_count = 0;
 
+function display_highest_score() {
+    const h_score = document.getElementById('highest_score'); // add the html element for the function to display 
+
+    if (!h_score) return;
+
+    const stats = JSON.parse(localStorage.getItem('quiz_stats'));
+    if (!stats) {
+
+        h_score.textContent = "No high score yet.";
+        return;
+    }
+
+
+
+    let best_score = 0;
+
+
+    // looping through the categories and the levels
+    for (const [category, levels] of Object.entries(stats)) {
+        for (const [level, s] of Object.entries(levels)) {
+            const score = s.best_score || 0;
+
+
+            // if the question is correct points become + 20
+            // const points = (s.correct || 0) * 20
+
+            if (score > best_score) {
+                best_score = score;
+
+
+            }
+
+
+        }
+    }
+    // if it is 0 no high score message is displayed
+    h_score.textContent = best_score > 0 ? `Highest Score : ${best_score}` : "No high score yet";
+}
 
 
 // event listener so the DOM is loading the username with the render_profile function
 document.addEventListener('DOMContentLoaded', () => {
     render_profile();
+    display_highest_score();
 });
 
 
@@ -30,9 +69,9 @@ function render_profile() {
 
 // the stats are saved inside the local storage and after displayed
 let quiz_stats = JSON.parse(localStorage.getItem("quiz_stats")) || {
-    iq: { beginner: { correct: 0, wrong: 0 }, intermediate: { correct: 0, wrong: 0 }, advanced: { correct: 0, wrong: 0 } },
-    knowledge: { beginner: { correct: 0, wrong: 0 }, intermediate: { correct: 0, wrong: 0 }, advanced: { correct: 0, wrong: 0 } },
-    programming: { beginner: { correct: 0, wrong: 0 }, intermediate: { correct: 0, wrong: 0 }, advanced: { correct: 0, wrong: 0 } }
+    iq: { beginner: { best_score: 0, correct: 0, wrong: 0 }, intermediate: { best_score: 0, correct: 0, wrong: 0 }, advanced: { best_score: 0, correct: 0, wrong: 0 } },
+    knowledge: { beginner: { best_score: 0, correct: 0, wrong: 0 }, intermediate: { best_score: 0, correct: 0, wrong: 0 }, advanced: { best_score: 0, correct: 0, wrong: 0 } },
+    programming: { beginner: { best_score: 0, correct: 0, wrong: 0 }, intermediate: { best_score: 0, correct: 0, wrong: 0 }, advanced: { best_score: 0, correct: 0, wrong: 0 } }
 };
 
 
@@ -281,12 +320,18 @@ function end_quiz() {
     const category = getCategory();
     const difficulty = getDifficulty();
 
+    if (score > (quiz_stats[category][difficulty].best_score || 0)) {
+        quiz_stats[category][difficulty].best_score = score;
+    }
+
     // this is the text that will be shown at the end of the quixz
 
     // displays the correct and wrong questions at the end 
     //and calculates the total stats 
 
 
+    // svaing to the localStorage and after this updates the best_score
+    localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
 
     container.innerHTML = `
         <div class="quiz-complete">
@@ -305,6 +350,9 @@ function end_quiz() {
             <button class="back-btn" onclick="window.location.href='../difficulty.html'">Back to Category Selection</button>
         </div>
     `;
+
+    // update the high score each time at the end of the quiz
+    display_highest_score();
 
 
 }
