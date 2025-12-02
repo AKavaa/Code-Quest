@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     reset_button();
 });
 
+
 // ================== LOAD USERNAME & SHOW STATS ==================
 function render_profile() {
     let username = localStorage.getItem("username") || "Guest";
@@ -69,6 +70,12 @@ function category_filters() {
     });
 
     buttons[0].click(); // auto select first category
+}
+
+function display_score(){
+    const score = document.getElementById(''); // add the html element for the function to display 
+
+
 }
 
 
