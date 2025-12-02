@@ -73,9 +73,9 @@ function category_filters() {
 }
 
 function display_highest_score(){
-    const score = document.getElementById('highest_score'); // add the html element for the function to display 
+    const h_score = document.getElementById('highest_score'); // add the html element for the function to display 
 
-
+    if (!h_score) return;
 }
 
 
