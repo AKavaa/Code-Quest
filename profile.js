@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     render_profile();
     category_filters();
     reset_button();
+    display_highest_score();
 });
 
 
@@ -72,12 +73,45 @@ function category_filters() {
     buttons[0].click(); // auto select first category
 }
 
-function display_highest_score(){
+function display_highest_score() {
     const h_score = document.getElementById('highest_score'); // add the html element for the function to display 
 
     if (!h_score) return;
+
+    const stats = JSON.parse(localStorage.getItem('quiz_stats'));
+    if (!stats) {
+
+        h_score.textContent = "No high score yet.";
+        return;
+    }
+
+
+
+    let best_score = 0;
+
+
+    // looping through the categories and the levels
+    for (const [category, levels] of Object.entries(stats)) {
+        for (const [level, s] of Object.entries(levels)) {
+
+
+            // if the question is correct points become + 20
+            const points = (s.correct || 0) + 20;
+
+            if (points > best_score) {
+                best_score = points;
+
+            }
+
+
+        }
+    }
+    h_score.textContent = best_score > 0 ? `Highest Score : ${best_score}` : "No high score yet";
 }
 
+// if (s.correct > best_score) {
+//                 best_score = s.correct;
+//             }
 
 // function to display the stats that were saved inside the local storage
 function display_stats(category) {
