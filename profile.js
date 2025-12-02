@@ -72,7 +72,7 @@ function category_filters() {
     buttons[0].click(); // auto select first category
 }
 
-function display_score(){
+function display_highest_score(){
     const score = document.getElementById('highest_score'); // add the html element for the function to display 
 
 
