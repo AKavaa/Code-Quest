@@ -1,4 +1,5 @@
 function startGame() {
+    // variable username to compare if user exists or not
     const username = document.getElementById('username').value.trim();
 
 
