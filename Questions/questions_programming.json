@@ -2,21 +2,21 @@
     "programming_questions": [
         {
             "level": "beginner",
-            "question": "What is the output of this code? print(3 + 2 * 2)",
+            "question": "If an algorithm performs addition before multiplication unless parentheses change the order, what is the result of following the steps: multiply 2 by 2, then add 3?",
             "options": ["10", "7", "8", "5"],
             "answer": 1,
-            "type": "Python Output"
+            "type": "Algorithm Execution"
         },
         {
             "level": "beginner",
-            "question": "Which data type is used to store text in most programming languages?",
+            "question": "Which term represents a collection of characters used as input or output in many algorithms?",
             "options": ["int", "float", "string", "bool"],
             "answer": 2,
-            "type": "Theory"
+            "type": "Algorithm Basics"
         },
         {
             "level": "beginner",
-            "question": "What does HTML stand for?",
+            "question": "Which of the following best describes a language used to structure information for algorithmic processing?",
             "options": [
                 "Hyper Text Markup Language",
                 "High Transfer Meta Language",
@@ -24,88 +24,88 @@
                 "Hyperlink Text Management Language"
             ],
             "answer": 0,
-            "type": "Web Development"
+            "type": "Algorithm Representation"
         },
         {
             "level": "beginner",
-            "question": "What symbol is commonly used to start a comment in Python?",
+            "question": "Which symbol is commonly used to annotate or comment on steps in pseudocode or algorithm descriptions?",
             "options": ["//", "#", "/* */", "--"],
             "answer": 1,
-            "type": "Python Basics"
+            "type": "Algorithm Notation"
         },
         {
             "level": "beginner",
-            "question": "Which tag is used to insert an image in HTML?",
+            "question": "Which keyword is most often used to describe an operation that brings external data into an algorithm for processing?",
             "options": ["img", "image", "pic", "photo"],
             "answer": 0,
-            "type": "Web Development"
+            "type": "Input/Output Concepts"
         },
 
         {
             "level": "intermediate",
-            "question": "Which SQL command is used to remove a table completely?",
+            "question": "Which algorithmic command conceptually removes an entire data collection from use?",
             "options": ["DELETE", "DROP", "REMOVE", "CLEAR"],
             "answer": 1,
-            "type": "Databases"
+            "type": "Data Operations"
         },
         {
             "level": "intermediate",
-            "question": "In object-oriented programming, what keyword is used in many languages (like Java, C++, C#) to create an object from a class?",
+            "question": "In algorithmic modeling, what term describes the act of creating a new instance of a structured blueprint?",
             "answer": "new",
-            "type": "OOP Theory"
+            "type": "Algorithmic Abstraction"
         },
         {
             "level": "intermediate",
-            "question": "What is the time complexity of binary search?",
+            "question": "What is the time complexity of an algorithm that halves its search space on each iteration?",
             "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
             "answer": 1,
-            "type": "Algorithms"
+            "type": "Algorithm Complexity"
         },
         {
             "level": "intermediate",
-            "question": "Which HTTP method is typically used to update an existing resource?",
+            "question": "Which action describes modifying an existing data entry in a system modeled by algorithmic steps?",
             "options": ["GET", "POST", "PUT", "DELETE"],
             "answer": 2,
-            "type": "Web Development"
+            "type": "Algorithmic Operations"
         },
         {
             "level": "intermediate",
-            "question": "In Python, what is the output of len([1, 2, 3, [4, 5]])?",
+            "question": "If a list contains three numbers and one nested list, how many top-level elements does an algorithm count when measuring length?",
             "options": ["4", "5", "6", "3"],
             "answer": 0,
-            "type": "Python"
+            "type": "Algorithm Concepts"
         },
 
         {
             "level": "advanced",
-            "question": "What is the Big-O complexity of the best case for quicksort?",
+            "question": "What is the best-case time complexity of an efficient divide-and-conquer sorting algorithm such as quicksort?",
             "options": ["O(n²)", "O(n log n)", "O(log n)", "O(n)"],
             "answer": 1,
-            "type": "Algorithms"
+            "type": "Advanced Algorithms"
         },
         {
             "level": "advanced",
-            "question": "Which data structure is used to implement function call management in most programming languages?",
+            "question": "Which structure is used by algorithms to manage nested or deferred operations, especially in recursive computations?",
             "answer": "stack",
-            "type": "Data Structures"
+            "type": "Algorithm Data Structures"
         },
         {
             "level": "advanced",
-            "question": "What is the term for a function that calls itself during execution?",
+            "question": "What is the name of the algorithmic technique where a process invokes itself as part of its own execution?",
             "answer": "recursion",
-            "type": "Programming Concepts"
+            "type": "Algorithm Design"
         },
         {
             "level": "advanced",
-            "question": "What technique allows a program to continue running while waiting for I/O operations?",
+            "question": "What technique allows an algorithm to proceed with other tasks while waiting for a long-running operation to complete?",
             "answer": "asynchronous programming",
-            "type": "Programming Concepts"
+            "type": "Algorithm Efficiency"
         },
         {
             "level": "advanced",
-            "question": "In databases, what is the term for ensuring that multiple transactions occur safely without interfering with each other?",
+            "question": "What is the algorithmic principle that ensures multiple simultaneous operations do not produce inconsistent results?",
             "answer": "concurrency control",
-            "type": "Databases"
+            "type": "Algorithm Reliability"
         }
     ]
 }
