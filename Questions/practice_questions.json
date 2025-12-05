@@ -1,100 +1,50 @@
-{
-    "general_knowledge_questions": [
-        {
-            "level": "beginner",
-            "question": "How many continents are there on Earth?",
-            "options": ["5", "6", "7", "8"],
-            "answer": 2,
-            "type": "Geography"
-        },
-        {
-            "level": "beginner",
-            "question": "Who painted the Mona Lisa?",
-            "answer": "Leonardo da Vinci",
-            "type": "Art"
-        },
-        {
-            "level": "beginner",
-            "question": "In which year did World War II end?",
-            "answer": "1945",
-            "type": "History"
-        },
-        {
-            "level": "beginner",
-            "question": "What is the largest planet in our solar system?",
-            "options": ["Earth", "Jupiter", "Mars", "Saturn"],
-            "answer": 1,
-            "type": "Science"
-        },
-        {
-            "level": "beginner",
-            "question": "What is the capital city of France?",
-            "answer": "Paris",
-            "type": "Geography"
-        },
-
-        {
-            "level": "intermediate",
-            "question": "What is the chemical symbol for gold?",
-            "answer": "Au",
-            "type": "Science"
-        },
-        {
-            "level": "intermediate",
-            "question": "Which Shakespeare play features the character Hamlet?",
-            "options": ["Macbeth", "Romeo and Juliet", "Hamlet", "Othello"],
-            "answer": 2,
-            "type": "Literature"
-        },
-        {
-            "level": "intermediate",
-            "question": "What is the currency of Japan?",
-            "answer": "Yen",
-            "type": "Economics"
-        },
-        {
-            "level": "intermediate",
-            "question": "What gas do plants primarily absorb for photosynthesis?",
-            "answer": "Carbon dioxide",
-            "type": "Science"
-        },
-        {
-            "level": "intermediate",
-            "question": "Who wrote the novel '1984'?",
-            "answer": "George Orwell",
-            "type": "Literature"
-        },
-
-        {
-            "level": "advanced",
-            "question": "Who was the first woman to win a Nobel Prize?",
-            "answer": "Marie Curie",
-            "type": "History"
-        },
-        {
-            "level": "advanced",
-            "question": "What is the smallest country in the world by land area?",
-            "answer": "Vatican City",
-            "type": "Geography"
-        },
-        {
-            "level": "advanced",
-            "question": "Which composer went deaf later in life but continued to compose?",
-            "options": ["Mozart", "Beethoven", "Bach", "Chopin"],
-            "answer": 1,
-            "type": "Music"
-        },
-        {
-            "level": "advanced",
-            "question": "Which physicist proposed the uncertainty principle?",
-            "answer": "Werner Heisenberg",
-            "type": "Science"
-        },
-        {
-            "level": "advanced",
-            "question": "What ancient civilization built Machu Picchu?",
-            "answer": "The Inca Empire",
-            "type": "History"
-        }
-    ]
-}
+[
+    {
+        "level": "beginner",
+        "question": "How many continents are there on Earth?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": 2,
+        "type": "Geography"
+    },
+    {
+        "level": "beginner",
+        "question": "Who painted the Mona Lisa?",
+        "answer": "Leonardo da Vinci",
+        "type": "Art"
+    },
+    {
+        "level": "beginner",
+        "question": "In which year did World War II end?",
+        "answer": "1945",
+        "type": "History"
+    },
+    {
+        "level": "beginner",
+        "question": "What is the largest planet in our solar system?",
+        "options": [
+            "Earth",
+            "Jupiter",
+            "Mars",
+            "Saturn"
+        ],
+        "answer": 1,
+        "type": "Science"
+    },
+    {
+        "level": "beginner",
+        "question": "What is the capital city of France?",
+        "answer": "Paris",
+        "type": "Geography"
+    },
+    {
+        "level": "intermediate",
+        "question": "What is the chemical symbol for gold?",
+        "answer": "Au",
+        "type": "Science"
+    }
+]
