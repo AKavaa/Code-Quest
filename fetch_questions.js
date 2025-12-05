@@ -3,7 +3,7 @@
 
 // Variables holding the JSON file path so they can be used to fetch questions appropriately
 const QUESTIONS_JSON_IQ = '../Questions/questions_iq.json';
-const QUESTIONS_JSON_KNOWLEDGE = '../Questions/general_knowledge_questions.json';
+// const QUESTIONS_JSON_KNOWLEDGE = '../Questions/general_knowledge_questions.json';
 const QUESTIONS_JSON_PROGRAMMING = '../Questions/questions_programming.json';
 
 let locked_questions = {};
