@@ -63,8 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function render_profile() {
+    const playerNameElement = document.getElementById("player_name");
+    if (!playerNameElement) return;
+    
     const username = localStorage.getItem("username");
-    document.getElementById("player_name").textContent = username ? username : "Guest";
+    playerNameElement.textContent = username ? username : "Guest";
 }
 
 // the stats are saved inside the local storage and after displayed
@@ -115,7 +118,6 @@ async function load_all_questions() {
     try {
         const responses = await Promise.all([ // runnign multiple requests in parallel, fetching 
             fetch(QUESTIONS_JSON_IQ),           // from all the JSONs 
-            fetch(QUESTIONS_JSON_KNOWLEDGE),
             fetch(QUESTIONS_JSON_PROGRAMMING)
         ]);
         // looping through the JSONd and checking if the questions are fetched ok
@@ -125,12 +127,11 @@ async function load_all_questions() {
         }));
 
         // 0 -> IQ Questions
-        // 1 -> knowledge Questions
-        // 2 -> programming Questions
+        // 1 -> programming Questions
         locked_questions = {
             iq: data[0].iq_questions || [],
-            knowledge: data[1].general_knowledge_questions || [],
-            programming: data[2].programming_questions || []
+            knowledge: [], // knowledge questions not implemented yet
+            programming: data[1].programming_questions || []
         };
     }
     catch (err) {
