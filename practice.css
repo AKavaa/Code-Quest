@@ -43,3 +43,24 @@
     letter-spacing: 1.5px;
     border-color: rgba(31, 42, 68, 0.25);
 }
+
+
+/* Text input */
+#answer-input {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    color: #2b2d42;
+    font-size: 1rem;
+    width: 250px;
+    transition: all 0.3s ease;
+    margin-right: 0.8rem;
+}
+
+#answer-input:focus {
+    border-color: #4361ee;
+    background: rgba(255, 255, 255, 1);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
