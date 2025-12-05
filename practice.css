@@ -45,7 +45,6 @@
 }
 
 
-/* Text input */
 #answer-input {
     background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -63,4 +62,35 @@
     background: rgba(255, 255, 255, 1);
     outline: none;
     box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+
+
+#answer-input::placeholder {
+    color: rgba(43, 45, 66, 0.6);
+}
+
+#submit-answer {
+    background: linear-gradient(135deg, #4361ee, #3f37c9);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+#submit-answer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+}
+
+#submit-answer:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
