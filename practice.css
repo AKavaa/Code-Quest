@@ -94,3 +94,41 @@
     transform: none;
     box-shadow: none;
 }
+
+/* Completion message */
+#questions-container h3 {
+    text-align: center;
+    color: #2b2d42;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .logo-image {
+        max-width: 150px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .question-container {
+        padding: 1rem;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .option-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
