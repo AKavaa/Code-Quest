@@ -17,6 +17,18 @@
     letter-spacing: 0.5px;
 }
 
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
 #questions-container .options {
     display: grid;
     gap: 1rem;
@@ -44,6 +56,25 @@
     border-color: rgba(31, 42, 68, 0.25);
 }
 
+.questions-container {
+    background: rgba(255, 255, 255, 0.13);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    color: var(--text-color);
+
+}
+
+.question {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
 
 #answer-input {
     background-color: rgba(255, 255, 255, 0.9);
