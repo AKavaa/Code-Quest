@@ -164,6 +164,36 @@ input[type="text"]:focus {
     transform: translateX(5px);
 }
 
+.start-btn1 {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+}
+
+.start-btn1 i {
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.start-btn1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(67, 97, 238, 0.4);
+}
+
+.start-btn1:hover i {
+    transform: translateX(5px);
+}
+
 .features {
     display: flex;
     justify-content: center;
@@ -247,4 +277,26 @@ input[type="text"]:focus {
         max-width: 250px;
         justify-content: center;
     }
+}
+
+
+
+.about-btn {
+    display: inline-block;
+    margin: 15px auto 0;
+    padding: 12px 35px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.about-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
 }

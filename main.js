@@ -8,6 +8,11 @@ function startGame() {
         alert("Please enter a valid Username to start!");
         return 0;
     }
+    // nickname must be less than 9 characters
+    if (username.length > 8) {
+        alert("Enter a valid nickname below");
+        return;
+    }
 
     // save username in the local storage
     localStorage.setItem("username", username);
