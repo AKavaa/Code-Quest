@@ -74,9 +74,11 @@ function display_current_questions() {
             const input = document.getElementById('answer-input');
             const user_answer = input.value.trim();
             if (user_answer.toLowerCase() === question.answer.toString().toLowerCase()) {
+                // green
                 input.style.borderColor = "#4CAF50";
 
             } else {
+                // red
                 input.style.borderColor = "#f44336";
                 input.value = `Correct: ${question.answer}`;
 
