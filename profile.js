@@ -132,13 +132,15 @@ function display_stats(category) {
 
         // s -> stats 
         for (const [level, s] of Object.entries(levels)) {
-            const total = s.correct + s.wrong;
+            // calculating the highest score for each section
+            const total_high_score = (s.correct * 20) - (s.wrong * 10);
+
             html += `
                 <tr>
                     <td>${level}</td>
                     <td>${s.correct}</td>
                     <td>${s.wrong}</td>
-                    <td>${total}</td>
+                    <td>${total_high_score}</td>
                 </tr>`;
         }
 

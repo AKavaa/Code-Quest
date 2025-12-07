@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function render_profile() {
     const playerNameElement = document.getElementById("player_name");
     if (!playerNameElement) return;
-    
+
     const username = localStorage.getItem("username");
     playerNameElement.textContent = username ? username : "Guest";
 }
@@ -156,6 +156,11 @@ function load_questions_for_difficulty() {
     wrong_count = 0;
     correct_count = 0;
 
+    quiz_stats[category][difficulty].correct = 0;
+    quiz_stats[category][difficulty].wrong = 0;
+
+    // local storage doesnt stack up, each time quiz_stats are newly generated
+    localStorage.setItem("quiuz_stats", JSON.stringify(quiz_stats));
 
 
     if (!currentQuestions.length) {
