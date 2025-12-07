@@ -128,7 +128,7 @@ function display_stats(category) {
     for (const [cat, levels] of Object.entries(data)) {
         html += `<h2>${cat.toUpperCase()}</h2>`;
         html += `<table>
-                    <tr><th>Level</th><th>Correct</th><th>Wrong</th><th>Total</th></tr>`;
+                    <tr><th>Level</th><th>Correct</th><th>Wrong</th><th>High Score</th></tr>`;
 
         // s -> stats 
         for (const [level, s] of Object.entries(levels)) {
