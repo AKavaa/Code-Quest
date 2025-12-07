@@ -10,7 +10,7 @@ function startGame() {
     }
     // nickname must be less than 9 characters
     if (username.length > 8) {
-        alert("Enter a valid nickname below");
+        alert("Enter a valid nickname!");
         return;
     }
 
