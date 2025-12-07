@@ -68,6 +68,8 @@ function display_current_questions() {
        <button id="submit-answer">Submit</button>
        `;
 
+        // if question correct color gets green inside the user's input placeholder 
+        // if question correct color gets red inside the user's input placeholder 
         document.getElementById('submit-answer').addEventListener('click', () => {
             const input = document.getElementById('answer-input');
             const user_answer = input.value.trim();
