@@ -1,50 +1,185 @@
 [
-    {
-        "level": "beginner",
-        "question": "How many continents are there on Earth?",
-        "options": [
-            "5",
-            "6",
-            "7",
-            "8"
-        ],
-        "answer": 2,
-        "type": "Geography"
-    },
-    {
-        "level": "beginner",
-        "question": "Who painted the Mona Lisa?",
-        "answer": "Leonardo da Vinci",
-        "type": "Art"
-    },
-    {
-        "level": "beginner",
-        "question": "In which year did World War II end?",
-        "answer": "1945",
-        "type": "History"
-    },
-    {
-        "level": "beginner",
-        "question": "What is the largest planet in our solar system?",
-        "options": [
-            "Earth",
-            "Jupiter",
-            "Mars",
-            "Saturn"
-        ],
-        "answer": 1,
-        "type": "Science"
-    },
-    {
-        "level": "beginner",
-        "question": "What is the capital city of France?",
-        "answer": "Paris",
-        "type": "Geography"
-    },
-    {
-        "level": "intermediate",
-        "question": "What is the chemical symbol for gold?",
-        "answer": "Au",
-        "type": "Science"
-    }
+{
+"level": "beginner",
+"question": "What number comes next in this sequence? 2, 4, 8, 16, __",
+"answer": "32",
+"type": "Pattern Recognition"
+},
+{
+"level": "beginner",
+"question": "Which shape has the fewest sides?",
+"options": ["Triangle", "Square", "Pentagon", "Hexagon"],
+"answer": 0,
+"type": "Spatial Reasoning"
+},
+{
+"level": "beginner",
+"question": "Find the missing number: 10 → 5, 14 → 7, 6 → __",
+"answer": "3",
+"type": "Logical Deduction"
+},
+{
+"level": "beginner",
+"question": "Which number is the odd one out? 3, 5, 7, 9, 11",
+"answer": "9",
+"type": "Logical Deduction"
+},
+{
+"level": "beginner",
+"question": "What number comes next? 1, 4, 9, 16, __",
+"answer": "25",
+"type": "Pattern Recognition"
+},
+{
+"level": "beginner",
+"question": "What number comes next in the sequence? 5, 10, 15, 20, __",
+"answer": "25",
+"type": "Pattern Recognition"
+},
+{
+"level": "beginner",
+"question": "How many triangles are in a 2×2 grid of equilateral triangles?",
+"options": ["4", "6", "8", "9"],
+"answer": 1,
+"type": "Spatial Reasoning"
+},
+{
+"level": "beginner",
+"question": "If 2 machines take 2 hours to make 2 parts, how long for 4 machines to make 4 parts?",
+"answer": "2",
+"type": "Mathematical Reasoning"
+},
+{
+"level": "beginner",
+"question": "Find the next number: 1, 3, 6, 10, 15, __",
+"answer": "21",
+"type": "Pattern Recognition"
+},
+{
+"level": "beginner",
+"question": "A clock shows 3:15. What angle is between the hour and minute hands?",
+"answer": "7.5",
+"type": "Spatial Reasoning"
+},
+{
+"level": "beginner",
+"question": "Find the missing number: 2, 4, 6, 8, __",
+"answer": "10",
+"type": "Pattern Recognition"
+},
+{
+"level": "beginner",
+"question": "Rotate this shape mentally: If 'L' rotates 90°, which option matches?",
+"options": ["Γ", "┘", "└", "⊐"],
+"answer": 0,
+"type": "Spatial Reasoning"
+},
+{
+"level": "beginner",
+"question": "A number increases by 10% then decreases by 10%. What is the net percentage change?",
+"answer": "-1",
+"type": "Mathematical Reasoning"
+},
+{
+"level": "beginner",
+"question": "What number comes next? 2, 4, 3, 5, 4, 6, __",
+"answer": "5",
+"type": "Pattern Recognition"
+},
+{
+"level": "beginner",
+"question": "If A = 1, B = 2, ..., Z = 26, which is larger: (CAT) or (DOG)?",
+"answer": "DOG",
+"type": "Logical Deduction"
+},
+{
+"level": "beginner",
+"question": "Write a sequence of steps to sort 3 numbers in ascending order.",
+"answer": "Compare first two numbers, swap if needed, compare second and third, swap if needed, compare first two again, swap if needed.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "Find the sum of all even numbers between 1 and 10.",
+"answer": "30",
+"type": "Mathematical Reasoning"
+},
+{
+"level": "beginner",
+"question": "If you have a list [3, 1, 4], what is the output after sorting it in ascending order?",
+"answer": "[1, 3, 4]",
+"type": "Algorithm Simulation"
+},
+{
+"level": "beginner",
+"question": "Describe steps to check if a number is even or odd.",
+"answer": "Divide by 2; if remainder is 0 → even, else → odd.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "What is the output of adding 5 + 3 * 2?",
+"answer": "11",
+"type": "Mathematical Reasoning"
+},
+{
+"level": "beginner",
+"question": "Write steps to find the maximum number in a list of 5 numbers.",
+"answer": "Initialize max with first element, compare each element with max, update max if greater, output max.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "If an array is [2, 4, 6, 8], what is the result after doubling each element?",
+"answer": "[4, 8, 12, 16]",
+"type": "Algorithm Simulation"
+},
+{
+"level": "beginner",
+"question": "Describe an algorithm to check if a number is prime.",
+"answer": "Check divisibility by all numbers from 2 up to sqrt(n). If divisible → not prime, else → prime.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "Write steps to reverse a 4-digit number.",
+"answer": "Extract each digit, rearrange in reverse order, combine into new number.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "An array is [5, 3, 1, 4, 2]. Which algorithm sorts it in ascending order in minimum steps?",
+"answer": "Insertion sort or selection sort works efficiently for small arrays.",
+"type": "Algorithm Optimization"
+},
+{
+"level": "beginner",
+"question": "Describe an algorithm to find the greatest common divisor (GCD) of two numbers.",
+"answer": "Use Euclidean algorithm: GCD(a, b) = GCD(b, a mod b) until b=0.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "Write an algorithm to find all prime numbers less than 20.",
+"answer": "Use Sieve of Eratosthenes: mark multiples of each prime starting from 2.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "Given [3,1,4,1,5], find the second largest number.",
+"answer": "Sort array → [1,1,3,4,5], second largest is 4.",
+"type": "Algorithm Simulation"
+},
+{
+"level": "beginner",
+"question": "Describe an algorithm to check if a string is a palindrome.",
+"answer": "Compare first and last characters, move inward; if all match → palindrome.",
+"type": "Algorithm Design"
+},
+{
+"level": "beginner",
+"question": "How would you find the factorial of a number recursively?",
+"answer": "If n=0 → return 1, else return n * factorial(n-1).",
+"type": "Algorithm Design"
+}
 ]
