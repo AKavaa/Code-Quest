@@ -110,10 +110,14 @@ function checkAnswer(selectedIndex) {
         buttons[selectedIndex].style.backgroundColor = '#4CAF50'
     } else {
         buttons[selectedIndex].style.backgroundColor = '#f44336';
+        buttons[question.answer].style.backgroundColor = '#4CAF50';
 
 
     }
+    setTimeout(() => {
     currentQuestionIndex++;
+    display_current_questions();
+    }, 1500);
 
     // move to next question after 1.5 secs
     setTimeout(display_current_questions, 1500)
