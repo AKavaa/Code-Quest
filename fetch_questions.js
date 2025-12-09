@@ -51,7 +51,7 @@ function display_highest_score() {
         }
     }
     // if it is 0 no high score message is displayed
-    h_score.textContent = best_score > 0 ? `Highest Score : ${best_score}` : "No high score yet";
+    h_score.textContent = best_score > 0 ? `New High Score: ${best_score}` : "No high score yet";
 }
 
 
