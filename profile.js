@@ -126,7 +126,16 @@ function display_stats(category) {
     let html = "";
     // cat -> category 
     for (const [cat, levels] of Object.entries(data)) {
-        html += `<h2>${cat.toUpperCase()}</h2>`;
+        // if the section is programming then dispalay the words ALGORITHMIC SECTION
+        // because initially the name for the section was programming and it remained the same
+        const display_cat = (cat.toLowerCase() === "programming") ? "ALGORITHMIC" : cat;
+
+
+        html += `<h2>${display_cat.toUpperCase()}</h2>`;
+
+
+
+
         html += `<table>
                     <tr><th>Level</th><th>Correct</th><th>Wrong</th><th>High Score</th></tr>`;
 
