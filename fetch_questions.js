@@ -339,6 +339,7 @@ function end_quiz() {
     // svaing to the localStorage and after this updates the best_score
     localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
 
+    // all the stats of each quiz is being displayed at the end of the completion of the section
     container.innerHTML = `
         <div class="quiz-complete">
             <h2>🎉 Quiz Completed!</h2>
@@ -353,7 +354,8 @@ function end_quiz() {
             <p>Total Correct: ${quiz_stats[category][difficulty].correct}</p>
             <p>Total Wrong: ${quiz_stats[category][difficulty].wrong}</p>
 
-               <button class="player-btn" onclick="location.href='../profile.html'">
+        
+               <button class="player-btn1" onclick="location.href='../profile.html'">
             <i class="fas fa-user"></i>
             
         </button>
