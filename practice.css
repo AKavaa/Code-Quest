@@ -113,7 +113,9 @@
     transition: all 0.3s ease;
     min-width: 120px;
     margin-top: 1.5rem;
+
 }
+
 
 #submit-answer:hover {
     transform: translateY(-3px);
