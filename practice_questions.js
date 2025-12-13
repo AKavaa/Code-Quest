@@ -115,8 +115,8 @@ function checkAnswer(selectedIndex) {
 
     }
     setTimeout(() => {
-    currentQuestionIndex++;
-    display_current_questions();
+        currentQuestionIndex++;
+        display_current_questions();
     }, 1500);
 
     // move to next question after 1.5 secs
