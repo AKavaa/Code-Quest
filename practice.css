@@ -167,3 +167,17 @@
         font-size: 0.9rem;
     }
 }
+
+/* Correct and wrong answer styles */
+#questions-container .options button.correct {
+    background: rgba(76, 175, 80, 0.3);
+    border-color: #4CAF50;
+    pointer-events: none;
+}
+
+#questions-container .options button.wrong {
+    background: rgba(244, 67, 54, 0.3);
+    border-color: #f44336;
+    pointer-events: none;
+    color: white;
+}

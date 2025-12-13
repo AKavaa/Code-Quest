@@ -55,7 +55,7 @@ function display_current_questions() {
 
        <h2>Question ${currentQuestionIndex + 1}: ${question.question}</h2>
             <div class="options">
-                ${question.options.map((opt, i) => `<button onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+                ${question.options.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
             </div>
     
     `;
@@ -102,24 +102,22 @@ function display_current_questions() {
 function checkAnswer(selectedIndex) {
 
     const question = currentQuestions[currentQuestionIndex];
-    const buttons = container.querySelectorAll('button');
+    const buttons = container.querySelectorAll('.option-btn');
 
     buttons.forEach(btn => btn.disabled = true);
 
     if (selectedIndex === question.answer) {
-        buttons[selectedIndex].style.backgroundColor = '#4CAF50'
+        buttons[selectedIndex].classList.add('correct');
     } else {
-        buttons[selectedIndex].style.backgroundColor = '#f44336';
-        buttons[question.answer].style.backgroundColor = '#4CAF50';
-
-
+        buttons[selectedIndex].classList.add('wrong');
+        // highlights the correct answer 
+        buttons[question.answer]?.classList.add('correct');
     }
+
+    // move to next question after 1.5 secs
     setTimeout(() => {
         currentQuestionIndex++;
         display_current_questions();
     }, 1500);
-
-    // move to next question after 1.5 secs
-    setTimeout(display_current_questions, 1500)
 }
 
