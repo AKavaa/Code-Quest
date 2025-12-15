@@ -24,7 +24,7 @@ Instead of plain text problems, users will **play their way through algorithmic 
 - 🧩 **Interactive Coding Challenges** – practice algorithms through dynamic puzzles and tasks.  
 - 🎮 **Game Progression System** – complete levels to unlock harder challenges and earn rewards.   
 - 🔍 **Algorithm Visualizer** – see how your solution executes step by step.  
-- 🌐 **Cross-Language Support** – solve problems in multiple programming languages.
+
 
 ---
 
