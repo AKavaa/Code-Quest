@@ -36,7 +36,7 @@ Instead of plain text problems, users will **play their way through algorithmic 
 | Phase 1 | Core idea design + wireframes | ✅ Completed |
 | Phase 2 | Backend setup + JSON format |  ✅  Completed |
 | Phase 3 | Frontend integration & game logic | ✅  Completed |
-| Phase 4 | Public demo release | ⏳ Planned |
+| Phase 4 | Public demo release | 16 / 12 / 2025 |
 
 ---
 
