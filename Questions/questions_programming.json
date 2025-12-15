@@ -2,110 +2,111 @@
     "programming_questions": [
         {
             "level": "beginner",
-            "question": "If an algorithm performs addition before multiplication unless parentheses change the order, what is the result of following the steps: multiply 2 by 2, then add 3?",
-            "options": ["10", "7", "8", "5"],
-            "answer": 1,
-            "type": "Algorithm Execution"
+            "question": "What is an algorithm?",
+            "answer": "step-by-step instructions",
+            "type": "Short Answer"
         },
         {
             "level": "beginner",
-            "question": "Which term represents a collection of characters used as input or output in many algorithms?",
-            "options": ["int", "float", "string", "bool"],
-            "answer": 2,
-            "type": "Algorithm Basics"
-        },
-        {
-            "level": "beginner",
-            "question": "Which of the following best describes a language used to structure information for algorithmic processing?",
+            "question": "Which best describes an algorithm?",
             "options": [
-                "Hyper Text Markup Language",
-                "High Transfer Meta Language",
-                "Home Tool Markup Language",
-                "Hyperlink Text Management Language"
+                "random guess",
+                "step-by-step process",
+                "computer hardware",
+                "visual layout"
             ],
-            "answer": 0,
-            "type": "Algorithm Representation"
+            "answer": 1,
+            "type": "Multiple Choice"
         },
         {
             "level": "beginner",
-            "question": "Which symbol is commonly used to annotate or comment on steps in pseudocode or algorithm descriptions?",
-            "options": ["//", "#", "/* */", "--"],
-            "answer": 1,
-            "type": "Algorithm Notation"
+            "question": "What do we call the final result of an algorithm?",
+            "answer": "output",
+            "type": "Short Answer"
         },
         {
             "level": "beginner",
-            "question": "Which keyword is most often used to describe an operation that brings external data into an algorithm for processing?",
-            "options": ["img", "image", "pic", "photo"],
-            "answer": 0,
-            "type": "Input/Output Concepts"
+            "question": "Following a recipe step by step represents which idea?",
+            "answer": "sequential steps",
+            "type": "Concept Identification"
         },
-
+        {
+            "level": "beginner",
+            "question": "Why must algorithms eventually stop?",
+            "answer": "to terminate",
+            "type": "Short Answer"
+        },
         {
             "level": "intermediate",
-            "question": "Which algorithmic command conceptually removes an entire data collection from use?",
-            "options": ["DELETE", "DROP", "REMOVE", "CLEAR"],
+            "question": "Breaking a big problem into smaller parts is called what?",
+            "answer": "problem decomposition",
+            "type": "Short Answer"
+        },
+        {
+            "level": "intermediate",
+            "question": "Repeating steps until a condition is met is called?",
+            "answer": "iteration",
+            "type": "Short Answer"
+        },
+        {
+            "level": "intermediate",
+            "question": "Which approach checks all possible solutions?",
+            "options": [
+                "greedy method",
+                "brute-force method",
+                "random choice",
+                "heuristic"
+            ],
             "answer": 1,
-            "type": "Data Operations"
+            "type": "Multiple Choice"
         },
         {
             "level": "intermediate",
-            "question": "In algorithmic modeling, what term describes the act of creating a new instance of a structured blueprint?",
-            "answer": "new",
-            "type": "Algorithmic Abstraction"
+            "question": "Reducing the number of choices improves what?",
+            "answer": "execution speed",
+            "type": "Short Answer"
         },
         {
             "level": "intermediate",
-            "question": "What is the time complexity of an algorithm that halves its search space on each iteration?",
-            "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+            "question": "What describes an algorithm that handles bigger inputs well?",
+            "answer": "scalable algorithm",
+            "type": "Concept Identification"
+        },
+        {
+            "level": "advanced",
+            "question": "Choosing the best local option each step is called?",
+            "answer": "greedy strategy",
+            "type": "Short Answer"
+        },
+        {
+            "level": "advanced",
+            "question": "Two processes changing data simultaneously can cause?",
+            "answer": "inconsistent results",
+            "type": "Short Answer"
+        },
+        {
+            "level": "advanced",
+            "question": "Which approach finds good-enough solutions quickly?",
+            "options": [
+                "exact algorithm",
+                "heuristic approach",
+                "brute-force",
+                "deterministic method"
+            ],
             "answer": 1,
-            "type": "Algorithm Complexity"
-        },
-        {
-            "level": "intermediate",
-            "question": "Which action describes modifying an existing data entry in a system modeled by algorithmic steps?",
-            "options": ["GET", "POST", "PUT", "DELETE"],
-            "answer": 2,
-            "type": "Algorithmic Operations"
-        },
-        {
-            "level": "intermediate",
-            "question": "If a list contains three numbers and one nested list, how many top-level elements does an algorithm count when measuring length?",
-            "options": ["4", "5", "6", "3"],
-            "answer": 0,
-            "type": "Algorithm Concepts"
-        },
-
-        {
-            "level": "advanced",
-            "question": "What is the best-case time complexity of an efficient divide-and-conquer sorting algorithm such as quicksort?",
-            "options": ["O(n²)", "O(n log n)", "O(log n)", "O(n)"],
-            "answer": 1,
-            "type": "Advanced Algorithms"
+            "type": "Multiple Choice"
         },
         {
             "level": "advanced",
-            "question": "Which structure is used by algorithms to manage nested or deferred operations, especially in recursive computations?",
-            "answer": "stack",
-            "type": "Algorithm Data Structures"
+            "question": "Handling unusual cases improves what?",
+            "answer": "algorithm reliability",
+            "type": "Short Answer"
         },
         {
             "level": "advanced",
-            "question": "What is the name of the algorithmic technique where a process invokes itself as part of its own execution?",
-            "answer": "recursion",
-            "type": "Algorithm Design"
-        },
-        {
-            "level": "advanced",
-            "question": "What technique allows an algorithm to proceed with other tasks while waiting for a long-running operation to complete?",
-            "answer": "asynchronous programming",
-            "type": "Algorithm Efficiency"
-        },
-        {
-            "level": "advanced",
-            "question": "What is the algorithmic principle that ensures multiple simultaneous operations do not produce inconsistent results?",
-            "answer": "concurrency control",
-            "type": "Algorithm Reliability"
+            "question": "Algorithm performance relative to input size is called?",
+            "answer": "time complexity",
+            "type": "Concept Identification"
         }
     ]
 }
