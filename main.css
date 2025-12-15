@@ -22,14 +22,15 @@ variables for the styles
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 20px;
-    color: var(--text-color);
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    /* change from hidden to auto */
+    /* so the page is scrollable on a mobile device */
+    flex-direction: column;
+
 }
 
 .background {
