@@ -147,6 +147,10 @@
 
 }
 
+#questions-container {
+    color: #2b2d42
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
