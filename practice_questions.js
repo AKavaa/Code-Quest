@@ -85,8 +85,8 @@ function display_current_questions() {
             }
             currentQuestionIndex++;
 
-            // move to next question after 1.5 secs
-            setTimeout(display_current_questions, 1500)
+            // move to next question after 2.5 secs
+            setTimeout(display_current_questions, 2500)
 
 
         });

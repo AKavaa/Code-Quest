@@ -252,8 +252,8 @@ function checkAnswer(selectedIndex) {
         buttons[question.answer]?.classList.add('correct');
     }
     localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
-    // move to next question after 1.5 secs
-    setTimeout(moveToNextQuestion, 1500)
+    // move to next question after 2.5 secs
+    setTimeout(moveToNextQuestion, 2500)
 }
 
 
@@ -293,8 +293,8 @@ function checkTextAnswer() {
         setTimeout(() => input.value = `Correct: ${question.answer}`, 500)
     }
     localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
-    // move to next question after 1.5 secs
-    setTimeout(moveToNextQuestion, 1500)
+    // move to next question after 2.5 secs
+    setTimeout(moveToNextQuestion, 2500)
 
     // localStorage.setItem('quiz_stats', JSON.stringify(quiz_stats));
     // // move to next question after 2 secs
