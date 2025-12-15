@@ -255,6 +255,10 @@ input[type="text"]:focus {
 
 /* Responsive Design */
 @media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+    }
+
     .container {
         padding: 30px 20px;
         margin: 20px;
