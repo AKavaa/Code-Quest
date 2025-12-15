@@ -256,6 +256,7 @@ input[type="text"]:focus {
 /* Responsive Design */
 @media (max-width: 600px) {
     body {
+        /* making the main page scrollable and not to interfere witht the container*/
         align-items: flex-start;
     }
 
