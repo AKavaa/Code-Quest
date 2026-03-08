@@ -46,8 +46,7 @@ Instead of plain text problems, users will **play their way through algorithmic 
 
 ---
 
-## 📢 Stay Tuned
-This repository will be updated frequently as new features are implemented.  
+🃏 Play the game here: https://akavaa.github.io/Code-Quest/
 
 
 > *“Learning algorithms should feel like solving a puzzle — not doing homework.”*
